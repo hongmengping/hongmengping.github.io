@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-01T13:53:33.376Z</updated>
+  <updated>2020-01-01T14:24:59.027Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://yoursite.com/2020/01/01/%E5%B1%95%E6%9C%9B20/"/>
     <id>http://yoursite.com/2020/01/01/%E5%B1%95%E6%9C%9B20/</id>
     <published>2020-01-01T13:53:33.000Z</published>
-    <updated>2020-01-01T13:53:33.376Z</updated>
+    <updated>2020-01-01T14:24:59.027Z</updated>
+    
+    <content type="html"><![CDATA[<p>回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数据。最后联调。环环相扣，缺一不可。</p><p>​    20的第一天，立个flag，下班回家好好学犀牛并且总结一天工作收获。</p><p>​    </p><p>​    </p><p>​    </p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数据。最后联调。环环相扣，缺一不可。
+      
     
     </summary>
     
