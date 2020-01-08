@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-01T14:24:59.027Z</updated>
+  <updated>2020-01-08T14:16:13.591Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>uniapp入坑记</title>
+    <link href="http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/"/>
+    <id>http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/</id>
+    <published>2020-01-08T14:16:13.000Z</published>
+    <updated>2020-01-08T14:16:13.591Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>展望20</title>
