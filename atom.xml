@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-08T14:16:13.591Z</updated>
+  <updated>2020-01-08T23:52:06.544Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,21 @@
     <link href="http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/"/>
     <id>http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/</id>
     <published>2020-01-08T14:16:13.000Z</published>
-    <updated>2020-01-08T14:16:13.591Z</updated>
+    <updated>2020-01-08T23:52:06.544Z</updated>
+    
+    <content type="html"><![CDATA[<p>##一.简短介绍</p><p>uniapp以一套代码8端共用，让这个框架火起来。使用这个框架编写的代码，可发布到iOS、Android、H5、以及各种小程序等多个平台</p><blockquote><p>官方展示效果二维码</p></blockquote><!-- ![image text]() -->]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;##一.简短介绍&lt;/p&gt;
+&lt;p&gt;uniapp以一套代码8端共用，让这个框架火起来。使用这个框架编写的代码，可发布到iOS、Android、H5、以及各种小程序等多个平台&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方展示效果二维码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!--
+      
     
     </summary>
     
