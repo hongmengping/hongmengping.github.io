@@ -4,18 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="uniapp入坑记, 想要飞翔的小菜鸟">
-    <meta name="description" content="一.简短介绍uniapp以一套代码8端共用，让这个框架火起来。使用这个框架编写的代码，可发布到iOS、Android、H5、以及各种小程序等多个平台
-
-官方展示效果二维码
-
-
-二.项目搭建
-所需开发工具
-
-1.创建uniapp的项目
-
-文件">
+    <meta name="keywords" content="笔记之js的缺点, 想要飞翔的小菜鸟">
+    <meta name="description" content="JS的缺点
+允许重复的变量声明：导致数据被覆盖
+var a = 1;function print() {console.log(a)}//假设有n行代码var a = 2;print()
+a = 2 会覆盖 a = 1 由于js这种事弱语言">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>uniapp入坑记 | 想要飞翔的小菜鸟</title>
+    <title>笔记之js的缺点 | 想要飞翔的小菜鸟</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -314,12 +307,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">uniapp入坑记</h1>
+                    <h1 class="description center-align post-title">笔记之js的缺点</h1>
                 </div>
             </div>
         </div>
@@ -436,8 +429,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/uniapp%E5%88%9D%E4%BD%93%E9%AA%8C/">
-                                <span class="chip bg-color">uniapp初体验</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -452,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-01-13
                 </div>
                 
 
@@ -469,59 +462,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-简短介绍"><a href="#一-简短介绍" class="headerlink" title="一.简短介绍"></a>一.简短介绍</h2><p>uniapp以一套代码8端共用，让这个框架火起来。使用这个框架编写的代码，可发布到iOS、Android、H5、以及各种小程序等多个平台</p>
-<blockquote>
-<p>官方展示效果二维码</p>
+                <h2 id="JS的缺点"><a href="#JS的缺点" class="headerlink" title="JS的缺点"></a>JS的缺点</h2><ul>
+<li>允许重复的变量声明：导致数据被覆盖<blockquote>
+<p>var a = 1;<br>function print() {<br>console.log(a)<br>}<br>//假设有n行代码<br>var a = 2;<br>print()</p>
+<p>a = 2 会覆盖 a = 1 由于js这种事弱语言，变量重复不会报错，导致代码量一旦增加，就容易出现问题。而且这种问题很难发现。</p>
 </blockquote>
-<p><img src="https://hongmengping.github.io/medias/page2/B6AD7281-A764-4CD8-BD20-E5CCB319DA82.png" alt=""></p>
-<h2 id="二-项目搭建"><a href="#二-项目搭建" class="headerlink" title="二.项目搭建"></a>二.项目搭建</h2><blockquote>
-<p>所需开发工具<br><img src="https://hongmengping.github.io/medias/page2/83C6BD99-3D80-4767-ACDF-320A80C877F4.png" alt=""></p>
-</blockquote>
-<p>1.创建uniapp的项目</p>
-<blockquote>
-<p>文件 -&gt;  新建 -&gt; 项目</p>
-</blockquote>
-<p><img src="https://hongmengping.github.io/medias/page2/4FEB1A23-DC73-47B8-918D-11FD64A4C6AF.png" alt=""></p>
-<p><img src="https://hongmengping.github.io/medias/page2/D74D1B7A-0908-4566-A01F-9F2741C4961B.png" alt=""></p>
-<p>其中项目类型分为：</p>
+</li>
+<li>变量提升：怪异的数据访问、闭包问题<blockquote>
 <ul>
-<li>普通项目： 创建vue项目</li>
-<li>uni-app(U)：创建uni-app 可以实现发布到多端</li>
-<li>Wap2App(P):  wap2app 是一个将现有M站（也称手机wap站，区别于pc的web站）快速发布成 App 的增强方案。具有原生功能的体验。</li>
-<li>5+App(A):  HTML5 Plus移动App，简称5+App，这类App可以调用手机的原生能力，实现与原生App同样强大的功能和性能</li>
-<li>小程序(M): </li>
-<li>快应用:</li>
+<li>1.变量提升：怪异的数据访问<br>if(Math.random() &lt; 0.5&gt;) {<br>var a = “abc”;<br>console.log(a);<br>}else {<br>console.log(a);<br>}<br>console.log(a);<br>代码的字面意思：<br>如果随机数小于0.5，则声明变量a，赋值为abc，输出a<br>如果随机数不小于0.5，则输出a</li>
 </ul>
-<p>2.创建完成显示目录结构</p>
-<p><img src="https://hongmengping.github.io/medias/page2/C61A345D-404D-443C-87EA-31D25442CE05.png" alt=""></p>
-<p>3.初始化文件内容细说</p>
+<p>但是js在开始运行之前会进行变量提升，导致这段代码的意思变为<br>先声明一个变量a<br>如果随机数小于0.5，赋值为abc，输出a<br>否则,输出a<br>由此可见 js的变量提升会让数据访问变怪异</p>
 <ul>
-<li><p>index.vue   和vue项目一样 初始化的格式都是这样  都是uniapp运用的标签大体上有 view、image、text<br><img src="https://hongmengping.github.io/medias/page2/91D0490C-5A25-49E1-8187-FB9BA5F37EE3.png" alt=""></p>
+<li>2.变量提升，闭包<br>点击每一个按钮都只会输出11  原因是var i提升到全局，又因为js有变量提升以及预编译，导致循环的每一个i都是全局的这个i，预编译让i提前编译成11，所以导致不管点击哪个按钮都只会输出11。<br>var div = document.getElementById(“divButtons”);<br>for(var i = 1; i &lt;= 10; i ++) {<br>var btn = document.createElement(“button”);<br>btn.innerHTML = “按钮” + i;<br>div.appendChild(btn);<br>btn.onclick=function() {<br>console.log(i);<br>}<br>}</li>
+</ul>
+<p>js中解决闭包 使用立即执行函数<br>var div = document.getElementById(“divButtons”);<br>for(var i = 1; i &lt;= 10; i ++) {<br>var btn = document.createElement(“button”);<br>btn.innerHTML = “按钮” + i;<br>div.appendChild(btn);<br>(function(i) {<br>btn.onclick=function() {<br>console.log(i);<br>}<br>})<br>}</p>
+</blockquote>
 </li>
-<li><p>App.vue<br><img src="https://hongmengping.github.io/medias/page2/DEB56654-BE0D-42E9-A0B6-166E1EBDD5DA.png" alt=""></p>
-</li>
-<li><p>pages.json<br><img src="https://hongmengping.github.io/medias/page2/D50C2A34-91D5-4385-988E-6DB1BA902EEB.png" alt=""></p>
+<li>全局变量挂载到全局对象：全局对象成员污染问题<blockquote>
+<p>如果在全局定义变量，最后会归属于window。如果该变量和window中的变量相同，则会覆盖window中的变量，造成严重的错误。</p>
+</blockquote>
 </li>
 </ul>
-<h2 id="三-项目调试"><a href="#三-项目调试" class="headerlink" title="三.项目调试"></a>三.项目调试</h2><p>1.浏览器调试  浏览器调试又分为Chrome、Firefox、IE等 使用浏览器调试需要配置浏览器所在路径</p>
-<p><img src="https://hongmengping.github.io/medias/page2/0FE028EE-F3AD-4089-8F3D-77F213B20517.png" alt=""></p>
-<ul>
-<li>浏览器配置  运行-&gt;运行到浏览器-&gt; 配置web服务器 </li>
-</ul>
-<p><img src="https://hongmengping.github.io/medias/page2/F17B6B17-7109-40D1-B36D-48862D5BFAB8.png" alt=""></p>
-<p>2.小程序运行  运行-&gt;运行到浏览器-&gt; 配置web服务器  小程序运行配置</p>
-<p><img src="https://hongmengping.github.io/medias/page2/976E0D55-D8FC-4E2A-8DED-9CEE5C2062CC.png" alt=""></p>
-<p>小程序运行中微信小程序注意事项：</p>
-<ul>
-<li>首次运行会出现微信小程序访问被拒<br><img src="https://hongmengping.github.io/medias/page2/AABC13D4-78BE-475F-ABF7-86D147A81222.png" alt=""></li>
-</ul>
-<p>解决  打开微信小程序   设置-&gt;通用-&gt;安全   开启服务端口<br><img src="https://hongmengping.github.io/medias/page2/D74D1B7A-0908-4566-A01F-9F2741C4961B.png" alt=""></p>
-<h2 id="四-uniapp中-h5项目打包"><a href="#四-uniapp中-h5项目打包" class="headerlink" title="四.uniapp中 h5项目打包"></a>四.uniapp中 h5项目打包</h2><p>1.点开发行 -&gt; 网站-H5手机版</p>
-<p><img src="https://hongmengping.github.io/medias/page2/28E0110B-B015-49C8-88F3-1813937E2093.png" alt=""></p>
-<p>2.填写网站和域名 </p>
-<p><img src="https://hongmengping.github.io/medias/page2/CD99DFDD-D795-4AA9-B1D7-D83B5C6AA845.png" alt=""></p>
-<p>3.在manifest.json -&gt;  h5配置   -&gt;  运行的基础路径</p>
-<p><img src="https://hongmengping.github.io/medias/page2/63FB4B20-408E-494B-857E-8F8C40CCEAB0.png" alt=""></p>
 
             </div>
             <hr/>
@@ -547,7 +509,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/">http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/</a>
+                    <a href="http://yoursite.com/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/">http://yoursite.com/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -585,8 +547,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/uniapp%E5%88%9D%E4%BD%93%E9%AA%8C/">
-                                    <span class="chip bg-color">uniapp初体验</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
                         </div>
@@ -752,9 +714,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/">
                     <div class="card-image">
@@ -775,9 +738,9 @@ a = 2 会覆盖 a = 1 由于js这种事弱语言
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -786,6 +749,7 @@ a = 2 会覆盖 a = 1 由于js这种事弱语言
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -804,24 +768,34 @@ a = 2 会覆盖 a = 1 由于js这种事弱语言
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/01/%E5%B1%95%E6%9C%9B20/">
+                <a href="/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="展望20">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="uniapp入坑记">
                         
-                        <span class="card-title">展望20</span>
+                        <span class="card-title">uniapp入坑记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数
+                            一.简短介绍uniapp以一套代码8端共用，让这个框架火起来。使用这个框架编写的代码，可发布到iOS、Android、H5、以及各种小程序等多个平台
+
+官方展示效果二维码
+
+
+二.项目搭建
+所需开发工具
+
+1.创建uniapp的项目
+
+文件
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
                             </span>
                         <span class="publish-author">
                             
@@ -834,8 +808,8 @@ a = 2 会覆盖 a = 1 由于js这种事弱语言
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B1%95%E6%9C%9B/">
-                        <span class="chip bg-color">展望</span>
+                    <a href="/tags/uniapp%E5%88%9D%E4%BD%93%E9%AA%8C/">
+                        <span class="chip bg-color">uniapp初体验</span>
                     </a>
                     
                 </div>

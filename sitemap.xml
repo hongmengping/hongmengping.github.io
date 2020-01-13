@@ -2,23 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/</loc>
+    <loc>http://yoursite.com/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/</loc>
     
-    <lastmod>2020-01-10T14:22:36.632Z</lastmod>
+    <lastmod>2020-01-13T15:42:30.949Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2020-01-13T15:07:18.912Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/01/01/%E5%B1%95%E6%9C%9B20/</loc>
     
-    <lastmod>2020-01-01T14:24:59.027Z</lastmod>
+    <lastmod>2020-01-13T15:05:51.852Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/01/hello-world/</loc>
+    <loc>http://yoursite.com/friends/index.html</loc>
     
-    <lastmod>2020-01-01T12:14:12.502Z</lastmod>
+    <lastmod>2020-01-13T14:03:01.091Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/contact/index.html</loc>
+    
+    <lastmod>2020-01-13T14:02:54.090Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2020-01-13T14:02:45.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/archives/index.html</loc>
+    
+    <lastmod>2020-01-13T14:02:34.037Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2020-01-13T14:02:17.915Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/</loc>
+    
+    <lastmod>2020-01-10T14:22:36.632Z</lastmod>
     
   </url>
   

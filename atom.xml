@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-10T14:22:36.632Z</updated>
+  <updated>2020-01-13T15:42:30.949Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记之js的缺点</title>
+    <link href="http://yoursite.com/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/"/>
+    <id>http://yoursite.com/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/</id>
+    <published>2020-01-13T15:10:47.000Z</published>
+    <updated>2020-01-13T15:42:30.949Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="JS的缺点"><a href="#JS的缺点" class="headerlink" title="JS的缺点"></a>JS的缺点</h2><ul><li>允许重复的变量声明：导致数据被覆盖<blockquote><p>var a = 1;<br>function print() {<br>console.log(a)<br>}<br>//假设有n行代码<br>var a = 2;<br>print()</p><p>a = 2 会覆盖 a = 1 由于js这种事弱语言，变量重复不会报错，导致代码量一旦增加，就容易出现问题。而且这种问题很难发现。</p></blockquote></li><li>变量提升：怪异的数据访问、闭包问题<blockquote><ul><li>1.变量提升：怪异的数据访问<br>if(Math.random() &lt; 0.5&gt;) {<br>var a = “abc”;<br>console.log(a);<br>}else {<br>console.log(a);<br>}<br>console.log(a);<br>代码的字面意思：<br>如果随机数小于0.5，则声明变量a，赋值为abc，输出a<br>如果随机数不小于0.5，则输出a</li></ul><p>但是js在开始运行之前会进行变量提升，导致这段代码的意思变为<br>先声明一个变量a<br>如果随机数小于0.5，赋值为abc，输出a<br>否则,输出a<br>由此可见 js的变量提升会让数据访问变怪异</p><ul><li>2.变量提升，闭包<br>点击每一个按钮都只会输出11  原因是var i提升到全局，又因为js有变量提升以及预编译，导致循环的每一个i都是全局的这个i，预编译让i提前编译成11，所以导致不管点击哪个按钮都只会输出11。<br>var div = document.getElementById(“divButtons”);<br>for(var i = 1; i &lt;= 10; i ++) {<br>var btn = document.createElement(“button”);<br>btn.innerHTML = “按钮” + i;<br>div.appendChild(btn);<br>btn.onclick=function() {<br>console.log(i);<br>}<br>}</li></ul><p>js中解决闭包 使用立即执行函数<br>var div = document.getElementById(“divButtons”);<br>for(var i = 1; i &lt;= 10; i ++) {<br>var btn = document.createElement(“button”);<br>btn.innerHTML = “按钮” + i;<br>div.appendChild(btn);<br>(function(i) {<br>btn.onclick=function() {<br>console.log(i);<br>}<br>})<br>}</p></blockquote></li><li>全局变量挂载到全局对象：全局对象成员污染问题<blockquote><p>如果在全局定义变量，最后会归属于window。如果该变量和window中的变量相同，则会覆盖window中的变量，造成严重的错误。</p></blockquote></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;JS的缺点&quot;&gt;&lt;a href=&quot;#JS的缺点&quot; class=&quot;headerlink&quot; title=&quot;JS的缺点&quot;&gt;&lt;/a&gt;JS的缺点&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;允许重复的变量声明：导致数据被覆盖&lt;blockquote&gt;
+&lt;p&gt;var a = 1;&lt;br&gt;funct
+      
+    
+    </summary>
+    
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>uniapp入坑记</title>
@@ -45,7 +71,7 @@
     <link href="http://yoursite.com/2020/01/01/%E5%B1%95%E6%9C%9B20/"/>
     <id>http://yoursite.com/2020/01/01/%E5%B1%95%E6%9C%9B20/</id>
     <published>2020-01-01T13:53:33.000Z</published>
-    <updated>2020-01-01T14:24:59.027Z</updated>
+    <updated>2020-01-13T15:05:51.852Z</updated>
     
     <content type="html"><![CDATA[<p>回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数据。最后联调。环环相扣，缺一不可。</p><p>​    20的第一天，立个flag，下班回家好好学犀牛并且总结一天工作收获。</p><p>​    </p><p>​    </p><p>​    </p>]]></content>
     
@@ -60,27 +86,7 @@
     
     
     
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2020/01/01/hello-world/"/>
-    <id>http://yoursite.com/2020/01/01/hello-world/</id>
-    <published>2020-01-01T12:14:12.502Z</published>
-    <updated>2020-01-01T12:14:12.502Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
+      <category term="展望" scheme="http://yoursite.com/tags/%E5%B1%95%E6%9C%9B/"/>
     
   </entry>
   
