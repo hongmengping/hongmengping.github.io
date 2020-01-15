@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-14T14:21:00.069Z</updated>
+  <updated>2020-01-15T23:32:21.300Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6之let和const</title>
+    <link href="http://yoursite.com/2020/01/15/ES6%E4%B9%8Blet%E5%92%8Cconst/"/>
+    <id>http://yoursite.com/2020/01/15/ES6%E4%B9%8Blet%E5%92%8Cconst/</id>
+    <published>2020-01-15T14:28:35.000Z</published>
+    <updated>2020-01-15T23:32:21.300Z</updated>
+    
+    <content type="html"><![CDATA[<p>let的用法和var差不多，但是又和var不相同。let是为了弥补var的设计不足。var中只有全局作用域和局部作用域。在if和for中声明的也都是全局作用域，只有函数中声明会变成局部作用域。而let就有块级作用域，只要被大括号包裹就是块级作用域。</p><h2 id="一-使用let声明变量"><a href="#一-使用let声明变量" class="headerlink" title="一.使用let声明变量"></a>一.使用let声明变量</h2><ul><li><p>let声明的变量不会挂载到全局对象</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> div = <span class="built_in">document</span>.getElementById(<span class="string">"divButtons"</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>;i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> button = <span class="built_in">document</span>.createElement(<span class="string">"button"</span>);</span><br><span class="line">  button.innerHtml = <span class="string">"按钮"</span> + i;</span><br><span class="line">  button.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i) <span class="comment">//使用的是当前作用域的i</span></span><br><span class="line">  &#125;</span><br><span class="line">  div.appendChild(button)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在循环中，用let声明的循环变量，会特殊处理，每次进入循环体，都会开启一个新的作用域，并将循环变量绑定到该作用域（每次循环使用的都是新的循环变量）</p></li><li><p>let声明变量，不允许当前作用域范围内重复声明</p></li><li><p>使用let不会有变量提升，因此，不能在定义let之前使用。会造成暂时性死区。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a);  <span class="comment">//报错  因为暂时性死区</span></span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h2 id="二-使用const声明变量"><a href="#二-使用const声明变量" class="headerlink" title="二.使用const声明变量"></a>二.使用const声明变量</h2><p>const和let特性一样，但是const是用来声明常量的，const声明的常量的值不能改变。</p><ul><li><p>变量不可变，是指声明的常量的内存空间不可变，并不保证内存空间中的地址指向的其他空间不可变</p></li><li><p>变量的命名</p><ul><li><p>特殊的常量：该常量从字面意义上，一定是不可变的，比如圆周率,月地距离这样不可能变化的值。这种常量的名称都要使用大写</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="number">3.14</span></span><br><span class="line"><span class="keyword">const</span> MOONESRTHDISTANCE = <span class="number">111111</span>;</span><br></pre></td></tr></table></figure></li><li><p>普通常量正常命名即可</p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;let的用法和var差不多，但是又和var不相同。let是为了弥补var的设计不足。var中只有全局作用域和局部作用域。在if和for中声明的也都是全局作用域，只有函数中声明会变成局部作用域。而let就有块级作用域，只要被大括号包裹就是块级作用域。&lt;/p&gt;
+&lt;h2 id=&quot;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>初探闭包</title>
