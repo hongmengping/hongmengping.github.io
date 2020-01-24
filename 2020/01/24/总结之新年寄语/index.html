@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="初探闭包, 想要飞翔的小菜鸟">
-    <meta name="description" content="一.闭包产生的原因
-当内部函数被保存到外部时，将会生成闭包。闭包会导致原有的作用域链不释放，造成内存泄露
+    <meta name="keywords" content="总结之新年寄语, 想要飞翔的小菜鸟">
+    <meta name="description" content="今天是除夕，也算2020年新的开端。在1月1日，写下20年展望，回想这20几天。
 
-1234567891011function a () &amp;#123;  function b() &amp;#123;     var bbb">
+在工作上
+
+磕磕碰碰写完轿车托运。但是写的代码冗余度很高，uniapp的方法没有理解透，遇到问题，还是茫然无措，代码风格不是很好。依旧很粗心。尤其是bug一">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>初探闭包 | 想要飞翔的小菜鸟</title>
+    <title>总结之新年寄语 | 想要飞翔的小菜鸟</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -307,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初探闭包</h1>
+                    <h1 class="description center-align post-title">总结之新年寄语</h1>
                 </div>
             </div>
         </div>
@@ -429,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/%E6%80%BB%E7%BB%93/">
+                                <span class="chip bg-color">总结</span>
                             </a>
                         
                     </div>
@@ -445,7 +446,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-14
+                    2020-01-24
                 </div>
                 
 
@@ -462,38 +463,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-闭包产生的原因"><a href="#一-闭包产生的原因" class="headerlink" title="一.闭包产生的原因"></a>一.闭包产生的原因</h2><blockquote>
-<p>当内部函数被保存到外部时，将会生成闭包。闭包会导致原有的作用域链不释放，造成内存泄露</p>
+                <p>今天是除夕，也算2020年新的开端。在1月1日，写下20年展望，回想这20几天。</p>
+<blockquote>
+<p>在工作上</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> bbb = <span class="number">234</span>;</span><br><span class="line">     <span class="built_in">console</span>.log(aaa);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">var</span> aaa = <span class="number">123</span>;</span><br><span class="line">   <span class="keyword">return</span> b;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">var</span> glob = <span class="number">100</span>；</span><br><span class="line"> <span class="keyword">var</span> demo = a();</span><br><span class="line"> demo();</span><br></pre></td></tr></table></figure>
-
-<p>如下图<br><img src="https://hongmengping.github.io/medias/page3/image-20200114211612972.png" alt="image-20200114211612972"><br>return b是把b保存到外部了。当a执行完砍掉自己的执行期上下文，b仍然可以访问a的执行期上下文。只要是内部的函数被保存到外部，就一定会产生闭包。</p>
-<h2 id="二-闭包的作用"><a href="#二-闭包的作用" class="headerlink" title="二.闭包的作用"></a>二.闭包的作用</h2><ul>
-<li>1.实现公有变量</li>
-<li>2.可以做缓存(存储结构)</li>
-<li>3.可以实现属性私有化</li>
-<li>4.模块开发，防止污染全局变量</li>
-</ul>
-<ol>
-<li><p>实现公有变量</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    count ++;</span><br><span class="line">    <span class="built_in">console</span>.log(count);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> demo;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> conter = add();</span><br><span class="line">counter();</span><br><span class="line">counter();</span><br><span class="line">counter();</span><br><span class="line">counter();</span><br><span class="line">counter();</span><br></pre></td></tr></table></figure>
-<p>每次调用counter就会在原有的基础上加一次，count作为他们的公有变量</p>
-</li>
-<li><p>可以做缓存</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> num = <span class="number">100</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    num ++;</span><br><span class="line">    <span class="built_in">console</span>.log(num);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    num --;</span><br><span class="line">    <span class="built_in">console</span>.log(num);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> [a, b];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myArr = test();</span><br><span class="line">myArr[<span class="number">0</span>]();  <span class="comment">//101</span></span><br><span class="line">myArr[<span class="number">1</span>]();  <span class="comment">//100</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>函数a和函数b共用test的执行期上下文，所以num相当于在缓存中。a中的num++和b中的num–相当于从缓存中取。所以num是同一个。</p>
-<p>4.模块开发，防止污染全局变量</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"GlobalName"</span>;</span><br><span class="line"><span class="comment">//全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> init = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">"initName"</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">callName</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">    <span class="comment">//打印name</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    callName();</span><br><span class="line">    <span class="comment">//形成接口</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;());</span><br><span class="line">init();    <span class="comment">// --&gt; initName</span></span><br><span class="line"><span class="keyword">var</span> initSuper = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">"initSuperName"</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">callName</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">    <span class="comment">//打印name</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    callName();</span><br><span class="line">    <span class="comment">//形成接口</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;());</span><br><span class="line">initSuper(); <span class="comment">// --&gt; initSuperName</span></span><br></pre></td></tr></table></figure>
-
-
-<p>在执行init( )和initSuper( )时打印的name值互不影响</p>
-<h2 id="三-闭包和匿名函数的区别"><a href="#三-闭包和匿名函数的区别" class="headerlink" title="三. 闭包和匿名函数的区别"></a>三. 闭包和匿名函数的区别</h2><ul>
-<li>匿名函数：没有函数名称的函数。当函数执行完之后，执行期上下文会被销毁，内存中仅保存全局作用域。</li>
-<li>闭包：一个可以使用另外一个函数作用域中的变量的函数。执行期上下文不会被销毁，仍然保存在内存中</li>
-</ul>
+<p>磕磕碰碰写完轿车托运。但是写的代码冗余度很高，uniapp的方法没有理解透，遇到问题，还是茫然无措，代码风格不是很好。依旧很粗心。尤其是bug一多，pm催的时候，出错率更高。希望新的一年，遇到事情不慌，做事情再三检查再提交，轿车托运尽自己所能，最大程度优化</p>
+<blockquote>
+<p>在学习上</p>
+</blockquote>
+<p>英语单词断过两次，一次在松懈过程中断掉，还有一次公司尾牙玩的太欢忘记了，英语在工作中同等重要，加强英语学习。在前端学习中，本来预计在年前学完es6，但是因为上班时间工作完不成导致经常回来加班，学习计划一拖再拖，导致现在还没完成。希望新的一年，工作归工作，学习归学习。紧跟计划来，学完之前买的课程，把基础打扎实，不给被人添乱。</p>
+<blockquote>
+<p>在生活上</p>
+</blockquote>
+<p>多出去社交，运动。好好攒比钱学习兴趣。在这次尾牙活动中，不善于表达自己的想法，导致狼人杀中，我一直只是那句话。在ktv中因为唱歌会跑掉，而不敢去唱。一直处于自己的舒适区，所以今年打算突破自己，等转正去学习街舞，让自己变得更加自信，也算是新的开始吧。</p>
+<p>总的来说，新的一年，我要好好加油！</p>
 
             </div>
             <hr/>
@@ -519,7 +502,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/01/14/%E5%88%9D%E6%8E%A2%E9%97%AD%E5%8C%85/">http://yoursite.com/2020/01/14/%E5%88%9D%E6%8E%A2%E9%97%AD%E5%8C%85/</a>
+                    <a href="http://yoursite.com/2020/01/24/%E6%80%BB%E7%BB%93%E4%B9%8B%E6%96%B0%E5%B9%B4%E5%AF%84%E8%AF%AD/">http://yoursite.com/2020/01/24/%E6%80%BB%E7%BB%93%E4%B9%8B%E6%96%B0%E5%B9%B4%E5%AF%84%E8%AF%AD/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -557,8 +540,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/%E6%80%BB%E7%BB%93/">
+                                    <span class="chip bg-color">总结</span>
                                 </a>
                             
                         </div>
@@ -724,9 +707,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/01/24/%E6%80%BB%E7%BB%93%E4%B9%8B%E6%96%B0%E5%B9%B4%E5%AF%84%E8%AF%AD/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="总结之新年寄语">
+                        
+                        <span class="card-title">总结之新年寄语</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            今天是除夕，也算2020年新的开端。在1月1日，写下20年展望，回想这20几天。
+
+在工作上
+
+磕磕碰碰写完轿车托运。但是写的代码冗余度很高，uniapp的方法没有理解透，遇到问题，还是茫然无措，代码风格不是很好。依旧很粗心。尤其是bug一
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            hongmengping
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/01/15/ES6%E4%B9%8Blet%E5%92%8Cconst/">
                     <div class="card-image">
@@ -744,56 +778,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            hongmengping
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="笔记之js的缺点">
-                        
-                        <span class="card-title">笔记之js的缺点</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            JS的缺点
-允许重复的变量声明：导致数据被覆盖
-var a = 1;function print() {console.log(a)}//假设有n行代码var a = 2;print()
-a = 2 会覆盖 a = 1 由于js这种事弱语言
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-15
                             </span>
                         <span class="publish-author">
                             
