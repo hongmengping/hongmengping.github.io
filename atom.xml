@@ -2,208 +2,206 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>想要飞翔的小菜鸟</title>
   
-  <subtitle>不忘初心，方能始终</subtitle>
+  <subtitle>不忘初心 方能始终</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2020-01-29T12:33:09.555Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://hongmengping.github.io/"/>
+  <updated>2020-01-29T12:33:09.000Z</updated>
+  <id>https://hongmengping.github.io/</id>
   
   <author>
     <name>hongmengping</name>
     
   </author>
   
-  <generator uri="https://hexo.io/">Hexo</generator>
+  <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>ES6之函数</title>
-    <link href="http://yoursite.com/2020/01/29/ES6%E4%B9%8B%E5%87%BD%E6%95%B0/"/>
-    <id>http://yoursite.com/2020/01/29/ES6%E4%B9%8B%E5%87%BD%E6%95%B0/</id>
+    <link href="https://hongmengping.github.io/2020/01/29/es6-zhi-han-shu/"/>
+    <id>https://hongmengping.github.io/2020/01/29/es6-zhi-han-shu/</id>
     <published>2020-01-29T12:28:34.000Z</published>
-    <updated>2020-01-29T12:33:09.555Z</updated>
+    <updated>2020-01-29T12:33:09.000Z</updated>
     
     <summary type="html">
     
     </summary>
-    
     
     
   </entry>
   
   <entry>
     <title>ES6之字符串和正则表达式</title>
-    <link href="http://yoursite.com/2020/01/24/ES6%E4%B9%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/01/24/ES6%E4%B9%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+    <link href="https://hongmengping.github.io/2020/01/24/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/"/>
+    <id>https://hongmengping.github.io/2020/01/24/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/</id>
     <published>2020-01-24T08:06:45.000Z</published>
-    <updated>2020-01-30T00:57:10.788Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="更好的Unicode支持"><a href="#更好的Unicode支持" class="headerlink" title="更好的Unicode支持"></a>更好的Unicode支持</h1><p>早期，由于存储空间宝贵，Unicode使用16进制来存储文字。我们将一个16位的二进制编码叫做码元(Code Unit).</p><p>2^16 = 65536  对于全世界的存储来说  是不够的。</p><p>后来，由于技术的发展，Unicode对文字编码进行扩展，将某些文字扩展到了32位(占用两个码元)，并且，讲某个文字对应的二进制数字叫做码点（Code Point）。</p><p>2^32 = 429296729 目前够用  有的文字一个码点需要占用两个码元  有的文字的一个码点只占用一个码元</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> text = <span class="string">"𠮷"</span>;  <span class="comment">//字符串是根据码元来取的  这个字占用了两个码元（32位）</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"字符串长度："</span>, text.length); <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//正则是用码元来匹配的 不是用码点来匹配的  所以占两个码元</span></span><br><span class="line"><span class="comment">//正则中^代表开头 .代表容易单个字符串 $代表结尾</span></span><br><span class="line"><span class="comment">//为false 因为吉这个字是由一个码点 两个码元组成 而正则是根据码元来匹配 但是码元有两个。</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"使用正则测试："</span>, /^.$/.test(text)) </span><br><span class="line"></span><br><span class="line"><span class="comment">// 以前的方法</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"得到第一个码元"</span>, text.charCodeAt(<span class="number">0</span>).toString(<span class="number">16</span>))</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"得到第二个码元"</span>, text.charCodeAt(<span class="number">1</span>).toString(<span class="number">16</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">//ES6为了解决这个困扰，为字符串提供了方法： codePointAt, 根据字符串码元的位置得到</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//𠮷: \ud842\udfb7</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"得到第一个码点："</span>, text.codePointAt(<span class="number">0</span>));</span><br><span class="line"><span class="comment">//𠮷 这个字可以拆分为 \ud842 和 \udfb7  如果算第二个码点 就算\udfb7 </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"得到第二个码点："</span>, text.codePointAt(<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断文字是32位还是16位</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is32bit</span>(<span class="params">char, i</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 判断这个码点是否大于16位的最大值 如果大于 则其是32位</span></span><br><span class="line">    <span class="keyword">return</span> char.codePointAt(<span class="number">0</span>) &gt; <span class="number">0xffff</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 得到字符串码点的真实长度</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLengthOfCodePoint</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">        <span class="comment">// i在索引码元</span></span><br><span class="line">        <span class="keyword">if</span>(is32bit(str, i)) &#123;</span><br><span class="line">            <span class="comment">//当前字符串在i这个位置，占用两个码元</span></span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        len++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"𠮷是否是32位的"</span>, is32bit(<span class="string">"𠮷"</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//同时，ES6为正则添加了一个flag：u，如果添加了该配置，则匹配时，使用码点匹配</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"使用正则测试："</span>, /^.$/u.test(text))</span><br></pre></td></tr></table></figure><h1 id="更多的字符串API"><a href="#更多的字符串API" class="headerlink" title="更多的字符串API"></a>更多的字符串API</h1><p>以下均为字符串的实例方法（原型上的方法）</p><ul><li>includes  判断一个字符串中是否包含指定的子字符串</li><li>startsWith  判断字符串中是否以指定的字符串开始</li><li>endsWith  判断字符串中是否以指定的字符串结尾</li><li>repeat  将字符串重复指定的次数，然后返回一个新字符串</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断是否包含狠字</span></span><br><span class="line"><span class="keyword">const</span> text = <span class="string">"是个狠人"</span>;</span><br><span class="line"><span class="comment">//从字符串下标为0的开始查找</span></span><br><span class="line"><span class="keyword">const</span> result = text.includes(<span class="string">'狠'</span>);</span><br><span class="line"><span class="comment">//从字符串下标为3的开始查找</span></span><br><span class="line"><span class="keyword">const</span> result = text.includes(<span class="string">'狠'</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"是否包含“狠”"</span>, text.includes(<span class="string">"狠"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"是否以“是”开头"</span>, text.startsWith(<span class="string">"是"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"是否以“人”结尾"</span>, text.endsWith(<span class="string">"人"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"重复4次"</span>, text.repeat(<span class="number">4</span>));</span><br></pre></td></tr></table></figure><h1 id="正则中的粘连标记"><a href="#正则中的粘连标记" class="headerlink" title="正则中的粘连标记"></a>正则中的粘连标记</h1><p>标记名：y</p><p>含义：匹配时，完全按照正则对象中的lastIndex位置开始匹配，并且匹配的位置必须在lastIndex位置</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> text = <span class="string">"Hello World!!!"</span>;</span><br><span class="line"><span class="keyword">const</span> reg = <span class="regexp">/W\w+/</span>; <span class="comment">//以W字符开头+任意的单词字符一次或多次</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.text(text));  <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果加上y 表示粘连关系 根据lastIndex来判断。因为lastIndex为3，匹配所以为true lastIndex默认为0</span></span><br><span class="line"><span class="keyword">const</span> regY = <span class="regexp">/W\w+/y</span>;</span><br><span class="line">regY.lastIndex = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"reg.lastIndex:"</span>, reg.lastIndex); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(text));</span><br></pre></td></tr></table></figure><h1 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h1><p>ES6之前处理字符串繁琐的两个方面</p><ol><li>多行字符串</li><li>字符串拼接</li></ol><p>ES6中，提供了模板字符串的书写，可以非常方便的换行和拼接，要做的仅仅是将字符串的开始或结尾改为`符号</p><p>如果要在字符串中拼接js表达式，只需要在模板字符串中使用<code>${}</code></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以前处理方式 要用\n来换行 或者加斜杆换行</span></span><br><span class="line"><span class="keyword">var</span> text = <span class="string">"好好学习\n天天向上"</span></span><br><span class="line"><span class="keyword">var</span> text1 = <span class="string">"好好学习\</span></span><br><span class="line"><span class="string">                    天天向上"</span></span><br><span class="line"><span class="keyword">var</span> text2 = [<span class="string">'好好学习'</span>, <span class="string">'天天向上'</span>].join(<span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 模板字符串</span></span><br><span class="line"><span class="keyword">var</span> newText =  <span class="string">`好好学习</span></span><br><span class="line"><span class="string">天天向上`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 模板字符串拼接</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> condition = <span class="string">'废寝忘食'</span></span><br><span class="line"><span class="keyword">var</span> newText =  <span class="string">`好好学习</span></span><br><span class="line"><span class="string"><span class="subst">$&#123;condition&#125;</span>天天向上,</span></span><br><span class="line"><span class="string">表达式可以是任何有意义的数据<span class="subst">$&#123;<span class="number">1</span> + <span class="number">3</span> * <span class="number">2</span> <span class="regexp">/ 0.5&#125;</span></span></span></span><br><span class="line"><span class="string"><span class="subst"><span class="regexp">表达式是可以嵌套的$&#123;`表达式中的模板字符串`&#125;`</span></span></span></span><br></pre></td></tr></table></figure><h1 id="模板字符串的标记"><a href="#模板字符串的标记" class="headerlink" title="模板字符串的标记"></a>模板字符串的标记</h1><p>在模板字符串书写之前，可以加上标记：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">标记名<span class="string">`模板字符串`</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newTextTag =  myTag<span class="string">`好好学习</span></span><br><span class="line"><span class="string"><span class="subst">$&#123;condition&#125;</span>天天向上, <span class="subst">$&#123;condition&#125;</span>。`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//相当于  newTextTag = myTag(['好好学习', '天天向上', '。'], '废寝忘食', '废寝忘食')</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//实现模板字符串拼接</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myTag</span>(<span class="params">parts, arg1, arg2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> values = <span class="built_in">Array</span>.prototype.slice.apply(<span class="built_in">arguments</span>).slice(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">let</span> str = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; values.length; i++) &#123;</span><br><span class="line">        str += parts[i] + values[i];</span><br><span class="line">        <span class="keyword">if</span>(i === values.length - <span class="number">1</span>) &#123;</span><br><span class="line">            str += parts[i + <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(newTextTag)  <span class="comment">//好好学习废寝忘食天天向上，废寝忘食。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//String.raw 把转义字符变成字符串</span></span><br><span class="line"><span class="keyword">var</span> text = <span class="built_in">String</span>.raw<span class="string">`abc\nbcd`</span>;  <span class="comment">//abc\nbcd</span></span><br></pre></td></tr></table></figure><p>标记是一个函数，函数参数如下：</p><ol><li>参数1： 被插值分割的字符串数组</li><li>后续参数：所有的插值</li></ol>]]></content>
+    <updated>2020-01-30T00:57:10.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;更好的Unicode支持&quot;&gt;&lt;a href=&quot;#更好的Unicode支持&quot; class=&quot;headerlink&quot; title=&quot;更好的Unicode支持&quot;&gt;&lt;/a&gt;更好的Unicode支持&lt;/h1&gt;&lt;p&gt;早期，由于存储空间宝贵，Unicode使用16进制来存储文字
+        
+        
+          &lt;h1 id=&quot;更好的Unicode支持&quot;&gt;&lt;a href=&quot;#更好的Unicode支持&quot; class=&quot;headerlink&quot;
+        
       
     
     </summary>
     
     
-    
-      <category term="ES6笔记" scheme="http://yoursite.com/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>总结之新年寄语</title>
-    <link href="http://yoursite.com/2020/01/24/%E6%80%BB%E7%BB%93%E4%B9%8B%E6%96%B0%E5%B9%B4%E5%AF%84%E8%AF%AD/"/>
-    <id>http://yoursite.com/2020/01/24/%E6%80%BB%E7%BB%93%E4%B9%8B%E6%96%B0%E5%B9%B4%E5%AF%84%E8%AF%AD/</id>
+    <link href="https://hongmengping.github.io/2020/01/24/zong-jie-zhi-xin-nian-ji-yu/"/>
+    <id>https://hongmengping.github.io/2020/01/24/zong-jie-zhi-xin-nian-ji-yu/</id>
     <published>2020-01-24T07:07:31.000Z</published>
-    <updated>2020-01-24T07:29:20.449Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天是除夕，也算2020年新的开端。在1月1日，写下20年展望，回想这20几天。</p><blockquote><p>在工作上</p></blockquote><p>磕磕碰碰写完轿车托运。但是写的代码冗余度很高，uniapp的方法没有理解透，遇到问题，还是茫然无措，代码风格不是很好。依旧很粗心。尤其是bug一多，pm催的时候，出错率更高。希望新的一年，遇到事情不慌，做事情再三检查再提交，轿车托运尽自己所能，最大程度优化</p><blockquote><p>在学习上</p></blockquote><p>英语单词断过两次，一次在松懈过程中断掉，还有一次公司尾牙玩的太欢忘记了，英语在工作中同等重要，加强英语学习。在前端学习中，本来预计在年前学完es6，但是因为上班时间工作完不成导致经常回来加班，学习计划一拖再拖，导致现在还没完成。希望新的一年，工作归工作，学习归学习。紧跟计划来，学完之前买的课程，把基础打扎实，不给被人添乱。</p><blockquote><p>在生活上</p></blockquote><p>多出去社交，运动。好好攒比钱学习兴趣。在这次尾牙活动中，不善于表达自己的想法，导致狼人杀中，我一直只是那句话。在ktv中因为唱歌会跑掉，而不敢去唱。一直处于自己的舒适区，所以今年打算突破自己，等转正去学习街舞，让自己变得更加自信，也算是新的开始吧。</p><p>总的来说，新的一年，我要好好加油！</p>]]></content>
+    <updated>2020-01-24T07:29:20.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;今天是除夕，也算2020年新的开端。在1月1日，写下20年展望，回想这20几天。&lt;/p&gt;
+        
+        
+          &lt;p&gt;今天是除夕，也算2020年新的开端。在1月1日，写下20年展望，回想这20几天。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在工作上&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;磕磕碰碰写完轿车托运。但是写的代码冗余度很高，uniapp的方法没有理解透，遇到问题，还是茫然无措，
+        
       
     
     </summary>
     
     
-    
-      <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="https://hongmengping.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>ES6之let和const</title>
-    <link href="http://yoursite.com/2020/01/15/ES6%E4%B9%8Blet%E5%92%8Cconst/"/>
-    <id>http://yoursite.com/2020/01/15/ES6%E4%B9%8Blet%E5%92%8Cconst/</id>
+    <link href="https://hongmengping.github.io/2020/01/15/es6-zhi-let-he-const/"/>
+    <id>https://hongmengping.github.io/2020/01/15/es6-zhi-let-he-const/</id>
     <published>2020-01-15T14:28:35.000Z</published>
-    <updated>2020-01-24T08:12:02.552Z</updated>
-    
-    <content type="html"><![CDATA[<p>let的用法和var差不多，但是又和var不相同。let是为了弥补var的设计不足。var中只有全局作用域和局部作用域。在if和for中声明的也都是全局作用域，只有函数中声明会变成局部作用域。而let就有块级作用域，只要被大括号包裹就是块级作用域。</p><h2 id="一-使用let声明变量"><a href="#一-使用let声明变量" class="headerlink" title="一.使用let声明变量"></a>一.使用let声明变量</h2><ul><li><p>let声明的变量不会挂载到全局对象</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> div = <span class="built_in">document</span>.getElementById(<span class="string">"divButtons"</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>;i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> button = <span class="built_in">document</span>.createElement(<span class="string">"button"</span>);</span><br><span class="line">  button.innerHtml = <span class="string">"按钮"</span> + i;</span><br><span class="line">  button.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i) <span class="comment">//使用的是当前作用域的i</span></span><br><span class="line">  &#125;</span><br><span class="line">  div.appendChild(button)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在循环中，用let声明的循环变量，会特殊处理，每次进入循环体，都会开启一个新的作用域，并将循环变量绑定到该作用域（每次循环使用的都是新的循环变量）</p></li><li><p>let声明变量，不允许当前作用域范围内重复声明</p></li><li><p>使用let不会有变量提升，因此，不能在定义let之前使用。会造成暂时性死区。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a);  <span class="comment">//报错  因为暂时性死区</span></span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h2 id="二-使用const声明变量"><a href="#二-使用const声明变量" class="headerlink" title="二.使用const声明变量"></a>二.使用const声明变量</h2><p>const和let特性一样，但是const是用来声明常量的，const声明的常量的值不能改变。</p><ul><li><p>变量不可变，是指声明的常量的内存空间不可变，并不保证内存空间中的地址指向的其他空间不可变</p></li><li><p>变量的命名</p><ul><li><p>特殊的常量：该常量从字面意义上，一定是不可变的，比如圆周率,月地距离这样不可能变化的值。这种常量的名称都要使用大写</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="number">3.14</span></span><br><span class="line"><span class="keyword">const</span> MOONESRTHDISTANCE = <span class="number">111111</span>;</span><br></pre></td></tr></table></figure></li><li><p>普通常量正常命名即可</p></li></ul></li></ul>]]></content>
+    <updated>2020-01-24T08:12:02.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;let的用法和var差不多，但是又和var不相同。let是为了弥补var的设计不足。var中只有全局作用域和局部作用域。在if和for中声明的也都是全局作用域，只有函数中声明会变成局部作用域。而let就有块级作用域，只要被大括号包裹就是块级作用域。&lt;/p&gt;
-&lt;h2 id=&quot;
+        
+        
+          &lt;p&gt;let的用法和var差不多，但是又和var不相同。let是为了弥补var的设计不足。var中只有全局作用域和局部作用域。在if和for中声明的也都是全局作用域，只有函数中声明会变成局部作用域。而let就有块级作用域，只要被大括号包裹就是块级作用域。&lt;/p&gt;
+&lt;h2
+        
       
     
     </summary>
     
     
-    
-      <category term="ES6笔记" scheme="http://yoursite.com/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>初探闭包</title>
-    <link href="http://yoursite.com/2020/01/14/%E5%88%9D%E6%8E%A2%E9%97%AD%E5%8C%85/"/>
-    <id>http://yoursite.com/2020/01/14/%E5%88%9D%E6%8E%A2%E9%97%AD%E5%8C%85/</id>
+    <link href="https://hongmengping.github.io/2020/01/14/chu-tan-bi-bao/"/>
+    <id>https://hongmengping.github.io/2020/01/14/chu-tan-bi-bao/</id>
     <published>2020-01-14T12:22:09.000Z</published>
-    <updated>2020-01-14T14:21:00.069Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一-闭包产生的原因"><a href="#一-闭包产生的原因" class="headerlink" title="一.闭包产生的原因"></a>一.闭包产生的原因</h2><blockquote><p>当内部函数被保存到外部时，将会生成闭包。闭包会导致原有的作用域链不释放，造成内存泄露</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> bbb = <span class="number">234</span>;</span><br><span class="line">     <span class="built_in">console</span>.log(aaa);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">var</span> aaa = <span class="number">123</span>;</span><br><span class="line">   <span class="keyword">return</span> b;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">var</span> glob = <span class="number">100</span>；</span><br><span class="line"> <span class="keyword">var</span> demo = a();</span><br><span class="line"> demo();</span><br></pre></td></tr></table></figure><p>如下图<br><img src="https://hongmengping.github.io/medias/page3/image-20200114211612972.png" alt="image-20200114211612972"><br>return b是把b保存到外部了。当a执行完砍掉自己的执行期上下文，b仍然可以访问a的执行期上下文。只要是内部的函数被保存到外部，就一定会产生闭包。</p><h2 id="二-闭包的作用"><a href="#二-闭包的作用" class="headerlink" title="二.闭包的作用"></a>二.闭包的作用</h2><ul><li>1.实现公有变量</li><li>2.可以做缓存(存储结构)</li><li>3.可以实现属性私有化</li><li>4.模块开发，防止污染全局变量</li></ul><ol><li><p>实现公有变量</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    count ++;</span><br><span class="line">    <span class="built_in">console</span>.log(count);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> demo;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> conter = add();</span><br><span class="line">counter();</span><br><span class="line">counter();</span><br><span class="line">counter();</span><br><span class="line">counter();</span><br><span class="line">counter();</span><br></pre></td></tr></table></figure><p>每次调用counter就会在原有的基础上加一次，count作为他们的公有变量</p></li><li><p>可以做缓存</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> num = <span class="number">100</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    num ++;</span><br><span class="line">    <span class="built_in">console</span>.log(num);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    num --;</span><br><span class="line">    <span class="built_in">console</span>.log(num);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> [a, b];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myArr = test();</span><br><span class="line">myArr[<span class="number">0</span>]();  <span class="comment">//101</span></span><br><span class="line">myArr[<span class="number">1</span>]();  <span class="comment">//100</span></span><br></pre></td></tr></table></figure></li></ol><p>函数a和函数b共用test的执行期上下文，所以num相当于在缓存中。a中的num++和b中的num–相当于从缓存中取。所以num是同一个。</p><p>4.模块开发，防止污染全局变量</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"GlobalName"</span>;</span><br><span class="line"><span class="comment">//全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> init = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">"initName"</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">callName</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">    <span class="comment">//打印name</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    callName();</span><br><span class="line">    <span class="comment">//形成接口</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;());</span><br><span class="line">init();    <span class="comment">// --&gt; initName</span></span><br><span class="line"><span class="keyword">var</span> initSuper = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">"initSuperName"</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">callName</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">    <span class="comment">//打印name</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    callName();</span><br><span class="line">    <span class="comment">//形成接口</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;());</span><br><span class="line">initSuper(); <span class="comment">// --&gt; initSuperName</span></span><br></pre></td></tr></table></figure><p>在执行init( )和initSuper( )时打印的name值互不影响</p><h2 id="三-闭包和匿名函数的区别"><a href="#三-闭包和匿名函数的区别" class="headerlink" title="三. 闭包和匿名函数的区别"></a>三. 闭包和匿名函数的区别</h2><ul><li>匿名函数：没有函数名称的函数。当函数执行完之后，执行期上下文会被销毁，内存中仅保存全局作用域。</li><li>闭包：一个可以使用另外一个函数作用域中的变量的函数。执行期上下文不会被销毁，仍然保存在内存中</li></ul>]]></content>
+    <updated>2020-01-30T08:32:20.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;一-闭包产生的原因&quot;&gt;&lt;a href=&quot;#一-闭包产生的原因&quot; class=&quot;headerlink&quot; title=&quot;一.闭包产生的原因&quot;&gt;&lt;/a&gt;一.闭包产生的原因&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;当内部函数被保存到外部时，将会生成闭包。闭包会导致原有的作
+        
+        
+          &lt;h2 id=&quot;一-闭包产生的原因&quot;&gt;&lt;a href=&quot;#一-闭包产生的原因&quot; class=&quot;headerlink&quot;
+        
       
     
     </summary>
     
     
-    
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://hongmengping.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>笔记之js的缺点</title>
-    <link href="http://yoursite.com/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/"/>
-    <id>http://yoursite.com/2020/01/13/%E7%AC%94%E8%AE%B0%E4%B9%8BES6/</id>
+    <link href="https://hongmengping.github.io/2020/01/13/bi-ji-zhi-es6/"/>
+    <id>https://hongmengping.github.io/2020/01/13/bi-ji-zhi-es6/</id>
     <published>2020-01-13T15:10:47.000Z</published>
-    <updated>2020-01-24T08:11:56.847Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="JS的缺点"><a href="#JS的缺点" class="headerlink" title="JS的缺点"></a>JS的缺点</h2><ul><li>允许重复的变量声明：导致数据被覆盖<blockquote><p>var a = 1;<br>function print() {<br>console.log(a)<br>}<br>//假设有n行代码<br>var a = 2;<br>print()</p><p>a = 2 会覆盖 a = 1 由于js这种事弱语言，变量重复不会报错，导致代码量一旦增加，就容易出现问题。而且这种问题很难发现。</p></blockquote></li><li>变量提升：怪异的数据访问、闭包问题<blockquote><ul><li>1.变量提升：怪异的数据访问<br>if(Math.random() &lt; 0.5&gt;) {<br>var a = “abc”;<br>console.log(a);<br>}else {<br>console.log(a);<br>}<br>console.log(a);<br>代码的字面意思：<br>如果随机数小于0.5，则声明变量a，赋值为abc，输出a<br>如果随机数不小于0.5，则输出a</li></ul><p>但是js在开始运行之前会进行变量提升，导致这段代码的意思变为<br>先声明一个变量a<br>如果随机数小于0.5，赋值为abc，输出a<br>否则,输出a<br>由此可见 js的变量提升会让数据访问变怪异</p><ul><li>2.变量提升，闭包<br>点击每一个按钮都只会输出11  原因是var i提升到全局，又因为js有变量提升以及预编译，导致循环的每一个i都是全局的这个i，预编译让i提前编译成11，所以导致不管点击哪个按钮都只会输出11。<br>var div = document.getElementById(“divButtons”);<br>for(var i = 1; i &lt;= 10; i ++) {<br>var btn = document.createElement(“button”);<br>btn.innerHTML = “按钮” + i;<br>div.appendChild(btn);<br>btn.onclick=function() {<br>console.log(i);<br>}<br>}</li></ul><p>js中解决闭包 使用立即执行函数<br>var div = document.getElementById(“divButtons”);<br>for(var i = 1; i &lt;= 10; i ++) {<br>var btn = document.createElement(“button”);<br>btn.innerHTML = “按钮” + i;<br>div.appendChild(btn);<br>(function(i) {<br>btn.onclick=function() {<br>console.log(i);<br>}<br>})<br>}</p></blockquote></li><li>全局变量挂载到全局对象：全局对象成员污染问题<blockquote><p>如果在全局定义变量，最后会归属于window。如果该变量和window中的变量相同，则会覆盖window中的变量，造成严重的错误。</p></blockquote></li></ul>]]></content>
+    <updated>2020-01-24T08:11:56.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;JS的缺点&quot;&gt;&lt;a href=&quot;#JS的缺点&quot; class=&quot;headerlink&quot; title=&quot;JS的缺点&quot;&gt;&lt;/a&gt;JS的缺点&lt;/h2&gt;&lt;ul&gt;
+        
+        
+          &lt;h2 id=&quot;JS的缺点&quot;&gt;&lt;a href=&quot;#JS的缺点&quot; class=&quot;headerlink&quot; title=&quot;JS的缺点&quot;&gt;&lt;/a&gt;JS的缺点&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;允许重复的变量声明：导致数据被覆盖&lt;blockquote&gt;
-&lt;p&gt;var a = 1;&lt;br&gt;funct
+&lt;p&gt;var a =
+        
       
     
     </summary>
     
     
-    
-      <category term="ES6笔记" scheme="http://yoursite.com/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>uniapp入坑记</title>
-    <link href="http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/"/>
-    <id>http://yoursite.com/2020/01/08/uniapp%E5%85%A5%E5%9D%91%E8%AE%B0/</id>
+    <link href="https://hongmengping.github.io/2020/01/08/uniapp-ru-keng-ji/"/>
+    <id>https://hongmengping.github.io/2020/01/08/uniapp-ru-keng-ji/</id>
     <published>2020-01-08T14:16:13.000Z</published>
-    <updated>2020-01-10T14:22:36.632Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一-简短介绍"><a href="#一-简短介绍" class="headerlink" title="一.简短介绍"></a>一.简短介绍</h2><p>uniapp以一套代码8端共用，让这个框架火起来。使用这个框架编写的代码，可发布到iOS、Android、H5、以及各种小程序等多个平台</p><blockquote><p>官方展示效果二维码</p></blockquote><p><img src="https://hongmengping.github.io/medias/page2/B6AD7281-A764-4CD8-BD20-E5CCB319DA82.png" alt=""></p><h2 id="二-项目搭建"><a href="#二-项目搭建" class="headerlink" title="二.项目搭建"></a>二.项目搭建</h2><blockquote><p>所需开发工具<br><img src="https://hongmengping.github.io/medias/page2/83C6BD99-3D80-4767-ACDF-320A80C877F4.png" alt=""></p></blockquote><p>1.创建uniapp的项目</p><blockquote><p>文件 -&gt;  新建 -&gt; 项目</p></blockquote><p><img src="https://hongmengping.github.io/medias/page2/4FEB1A23-DC73-47B8-918D-11FD64A4C6AF.png" alt=""></p><p><img src="https://hongmengping.github.io/medias/page2/D74D1B7A-0908-4566-A01F-9F2741C4961B.png" alt=""></p><p>其中项目类型分为：</p><ul><li>普通项目： 创建vue项目</li><li>uni-app(U)：创建uni-app 可以实现发布到多端</li><li>Wap2App(P):  wap2app 是一个将现有M站（也称手机wap站，区别于pc的web站）快速发布成 App 的增强方案。具有原生功能的体验。</li><li>5+App(A):  HTML5 Plus移动App，简称5+App，这类App可以调用手机的原生能力，实现与原生App同样强大的功能和性能</li><li>小程序(M): </li><li>快应用:</li></ul><p>2.创建完成显示目录结构</p><p><img src="https://hongmengping.github.io/medias/page2/C61A345D-404D-443C-87EA-31D25442CE05.png" alt=""></p><p>3.初始化文件内容细说</p><ul><li><p>index.vue   和vue项目一样 初始化的格式都是这样  都是uniapp运用的标签大体上有 view、image、text<br><img src="https://hongmengping.github.io/medias/page2/91D0490C-5A25-49E1-8187-FB9BA5F37EE3.png" alt=""></p></li><li><p>App.vue<br><img src="https://hongmengping.github.io/medias/page2/DEB56654-BE0D-42E9-A0B6-166E1EBDD5DA.png" alt=""></p></li><li><p>pages.json<br><img src="https://hongmengping.github.io/medias/page2/D50C2A34-91D5-4385-988E-6DB1BA902EEB.png" alt=""></p></li></ul><h2 id="三-项目调试"><a href="#三-项目调试" class="headerlink" title="三.项目调试"></a>三.项目调试</h2><p>1.浏览器调试  浏览器调试又分为Chrome、Firefox、IE等 使用浏览器调试需要配置浏览器所在路径</p><p><img src="https://hongmengping.github.io/medias/page2/0FE028EE-F3AD-4089-8F3D-77F213B20517.png" alt=""></p><ul><li>浏览器配置  运行-&gt;运行到浏览器-&gt; 配置web服务器 </li></ul><p><img src="https://hongmengping.github.io/medias/page2/F17B6B17-7109-40D1-B36D-48862D5BFAB8.png" alt=""></p><p>2.小程序运行  运行-&gt;运行到浏览器-&gt; 配置web服务器  小程序运行配置</p><p><img src="https://hongmengping.github.io/medias/page2/976E0D55-D8FC-4E2A-8DED-9CEE5C2062CC.png" alt=""></p><p>小程序运行中微信小程序注意事项：</p><ul><li>首次运行会出现微信小程序访问被拒<br><img src="https://hongmengping.github.io/medias/page2/AABC13D4-78BE-475F-ABF7-86D147A81222.png" alt=""></li></ul><p>解决  打开微信小程序   设置-&gt;通用-&gt;安全   开启服务端口<br><img src="https://hongmengping.github.io/medias/page2/D74D1B7A-0908-4566-A01F-9F2741C4961B.png" alt=""></p><h2 id="四-uniapp中-h5项目打包"><a href="#四-uniapp中-h5项目打包" class="headerlink" title="四.uniapp中 h5项目打包"></a>四.uniapp中 h5项目打包</h2><p>1.点开发行 -&gt; 网站-H5手机版</p><p><img src="https://hongmengping.github.io/medias/page2/28E0110B-B015-49C8-88F3-1813937E2093.png" alt=""></p><p>2.填写网站和域名 </p><p><img src="https://hongmengping.github.io/medias/page2/CD99DFDD-D795-4AA9-B1D7-D83B5C6AA845.png" alt=""></p><p>3.在manifest.json -&gt;  h5配置   -&gt;  运行的基础路径</p><p><img src="https://hongmengping.github.io/medias/page2/63FB4B20-408E-494B-857E-8F8C40CCEAB0.png" alt=""></p>]]></content>
+    <updated>2020-01-30T08:32:12.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;一-简短介绍&quot;&gt;&lt;a href=&quot;#一-简短介绍&quot; class=&quot;headerlink&quot; title=&quot;一.简短介绍&quot;&gt;&lt;/a&gt;一.简短介绍&lt;/h2&gt;&lt;p&gt;uniapp以一套代码8端共用，让这个框架火起来。使用这个框架编写的代码，可发布到iOS、Android、H
+        
+        
+          &lt;h2 id=&quot;一-简短介绍&quot;&gt;&lt;a href=&quot;#一-简短介绍&quot; class=&quot;headerlink&quot;
+        
       
     
     </summary>
     
     
-    
-      <category term="uniapp初体验" scheme="http://yoursite.com/tags/uniapp%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+      <category term="uniapp初体验" scheme="https://hongmengping.github.io/tags/uniapp%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
     
   </entry>
   
   <entry>
     <title>展望20</title>
-    <link href="http://yoursite.com/2020/01/01/%E5%B1%95%E6%9C%9B20/"/>
-    <id>http://yoursite.com/2020/01/01/%E5%B1%95%E6%9C%9B20/</id>
+    <link href="https://hongmengping.github.io/2020/01/01/zhan-wang-20/"/>
+    <id>https://hongmengping.github.io/2020/01/01/zhan-wang-20/</id>
     <published>2020-01-01T13:53:33.000Z</published>
-    <updated>2020-01-13T15:05:51.852Z</updated>
-    
-    <content type="html"><![CDATA[<p>回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数据。最后联调。环环相扣，缺一不可。</p><p>​    20的第一天，立个flag，下班回家好好学犀牛并且总结一天工作收获。</p><p>​    </p><p>​    </p><p>​    </p>]]></content>
+    <updated>2020-01-13T15:05:51.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数据。最后联调。环环相扣，缺一不可。
+        
+        
+          &lt;p&gt;回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事,
+        
       
     
     </summary>
     
     
-    
-      <category term="展望" scheme="http://yoursite.com/tags/%E5%B1%95%E6%9C%9B/"/>
+      <category term="展望" scheme="https://hongmengping.github.io/tags/%E5%B1%95%E6%9C%9B/"/>
     
   </entry>
   
