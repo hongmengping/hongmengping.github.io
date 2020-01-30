@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-01-29T12:33:09.000Z</updated>
+  <updated>2020-01-30T12:08:16.631Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -18,12 +18,51 @@
   
   <entry>
     <title>ES6之函数</title>
-    <link href="https://hongmengping.github.io/2020/01/29/es6-zhi-han-shu/"/>
-    <id>https://hongmengping.github.io/2020/01/29/es6-zhi-han-shu/</id>
-    <published>2020-01-29T12:28:34.000Z</published>
-    <updated>2020-01-29T12:33:09.000Z</updated>
+    <link href="https://hongmengping.github.io/2020/01/30/es6-zhi-han-shu/"/>
+    <id>https://hongmengping.github.io/2020/01/30/es6-zhi-han-shu/</id>
+    <published>2020-01-30T11:28:34.000Z</published>
+    <updated>2020-01-30T12:08:16.631Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参数默认值&quot;&gt;&lt;a href=&quot;#参数默认值&quot; class=&quot;headerlink&quot; title=&quot;参数默认值&quot;&gt;&lt;/a&gt;参数默认值&lt;/h1&gt;&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://hongmengping.github.io/2020/01/30/index/"/>
+    <id>https://hongmengping.github.io/2020/01/30/index/</id>
+    <published>2020-01-30T09:34:12.005Z</published>
+    <updated>2020-01-30T10:53:55.618Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;script&gt;
+        ///参数默认值
+
+        // 旧 要把 三个参数都写了 才能正确执行
+        function sum(a, b = 1, c = 3) {
+            return a + b + c;
+      
+        
+      
     
     </summary>
     
@@ -32,10 +71,10 @@
   
   <entry>
     <title>ES6之字符串和正则表达式</title>
-    <link href="https://hongmengping.github.io/2020/01/24/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/"/>
-    <id>https://hongmengping.github.io/2020/01/24/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/</id>
-    <published>2020-01-24T08:06:45.000Z</published>
-    <updated>2020-01-30T00:57:10.000Z</updated>
+    <link href="https://hongmengping.github.io/2020/01/30/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/"/>
+    <id>https://hongmengping.github.io/2020/01/30/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/</id>
+    <published>2020-01-30T08:06:45.000Z</published>
+    <updated>2020-01-30T10:44:01.622Z</updated>
     
     <summary type="html">
     

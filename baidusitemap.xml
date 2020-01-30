@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hongmengping.github.io/2020/01/30/es6-zhi-han-shu/</loc>
+    <lastmod>2020-01-30</lastmod>
+  </url>  <url>
+    <loc>https://hongmengping.github.io/2020/01/30/index/</loc>
+    <lastmod>2020-01-30</lastmod>
+  </url>  <url>
+    <loc>https://hongmengping.github.io/2020/01/30/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/</loc>
+    <lastmod>2020-01-30</lastmod>
+  </url>  <url>
     <loc>https://hongmengping.github.io/2020/01/14/chu-tan-bi-bao/</loc>
     <lastmod>2020-01-30</lastmod>
   </url>  <url>
     <loc>https://hongmengping.github.io/2020/01/08/uniapp-ru-keng-ji/</loc>
     <lastmod>2020-01-30</lastmod>
-  </url>  <url>
-    <loc>https://hongmengping.github.io/2020/01/24/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/</loc>
-    <lastmod>2020-01-30</lastmod>
-  </url>  <url>
-    <loc>https://hongmengping.github.io/2020/01/29/es6-zhi-han-shu/</loc>
-    <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>https://hongmengping.github.io/2020/01/15/es6-zhi-let-he-const/</loc>
     <lastmod>2020-01-24</lastmod>

@@ -4,8 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="展望20, 想要飞翔的小菜鸟">
-    <meta name="description" content="回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数">
+    <meta name="keywords" content="ES6之函数, 想要飞翔的小菜鸟">
+    <meta name="description" content="参数默认值使用    function sum(a, b = 1, c = 3) {
+        return a + b + c;
+    }
+
+    sum(10); //14
+    sum(11, 1, 2)  //14
+在书">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>展望20 | 想要飞翔的小菜鸟</title>
+    <title>ES6之函数 | 想要飞翔的小菜鸟</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/libs/awesome/css/all.css">
@@ -290,12 +296,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">展望20</h1>
+                    <h1 class="description center-align post-title">ES6之函数</h1>
                 </div>
             </div>
         </div>
@@ -412,8 +418,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/展望/">
-                                <span class="chip bg-color">展望</span>
+                            <a href="/tags/ES6笔记/">
+                                <span class="chip bg-color">ES6笔记</span>
                             </a>
                         
                     </div>
@@ -428,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-01
+                    2020-01-30
                 </div>
                 
 
@@ -445,11 +451,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数据。最后联调。环环相扣，缺一不可。</p>
-<p>​    20的第一天，立个flag，下班回家好好学犀牛并且总结一天工作收获。</p>
-<p>​    </p>
-<p>​    </p>
-<p>​    </p>
+                <h1 id="参数默认值"><a href="#参数默认值" class="headerlink" title="参数默认值"></a>参数默认值</h1><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class="line-numbers language-js"><code class="language-js">    <span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> a <span class="token operator">+</span> b <span class="token operator">+</span> c<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//14</span>
+    <span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//14</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在书写形参时，直接给形参赋值，赋的值为默认值</p>
+<p>这样一来，当调用函数时，如果没有给对应的参数赋值</p>
+<h2 id="【扩展】对arguments的影响"><a href="#【扩展】对arguments的影响" class="headerlink" title="【扩展】对arguments的影响"></a>【扩展】对arguments的影响</h2><p>只要给函数加上函数默认值，该函数会自动变成严格模式下的规则：arguments和形参脱离（尽量不要使用arguments）</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//非严格模式</span>
+<span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"arugments"</span><span class="token punctuation">,</span> arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arguments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1, 2</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a:"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> <span class="token string">"b:"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//1, 2</span>
+    a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"arugments"</span><span class="token punctuation">,</span> arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arguments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3, 2</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a:"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> <span class="token string">"b:"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3, 2</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 给函数默认值 会自动转化为严格模式</span>
+<span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"arugments"</span><span class="token punctuation">,</span> arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arguments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1, 2</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a:"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> <span class="token string">"b:"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//1, 2</span>
+    a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"arugments"</span><span class="token punctuation">,</span> arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arguments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1, 2</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a:"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> <span class="token string">"b:"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3, 2</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="【扩展】留意暂时性死区"><a href="#【扩展】留意暂时性死区" class="headerlink" title="【扩展】留意暂时性死区"></a>【扩展】留意暂时性死区</h2><p>形参和ES6中的let或const声明一样，具有作用域，并且根据参数的声明顺序，有暂时性死区</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span>a <span class="token operator">=</span> b<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -481,8 +518,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/展望/">
-                                    <span class="chip bg-color">展望</span>
+                                <a href="/tags/ES6笔记/">
+                                    <span class="chip bg-color">ES6笔记</span>
                                 </a>
                             
                         </div>
@@ -523,83 +560,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/08/uniapp-ru-keng-ji/">
+                <a href="/2020/01/30/es6-zhi-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="uniapp入坑记">
+                        <img src="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/6.jpg" class="responsive-img" alt="ES6之函数">
                         
-                        <span class="card-title">uniapp入坑记</span>
+                        <span class="card-title">ES6之函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一.简短介绍uniapp以一套代码8端共用，让这个框架火起来。使用这个框架编写的代码，可发布到iOS、Android、H5、以及各种小程序等多个平台
+                            参数默认值使用    function sum(a, b = 1, c = 3) {
+        return a + b + c;
+    }
 
-官方展示效果二维码
-
-
-二.项目搭建
-所需开发工具
-
-1.创建uniapp的项目
-
-文件
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            hongmengping
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/uniapp初体验/">
-                        <span class="chip bg-color">uniapp初体验</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/01/01/zhan-wang-20/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="展望20">
-                        
-                        <span class="card-title">展望20</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            回望19，经历实习毕业设计论文的摧残后，在家歇业自学前端。终于赶在19的小尾巴找了份工作。第一次接触项目，一脸懵逼，问同事, 查百度，终于捋清楚。首先，开始项目前，要先排期，排期要和UI和后端相呼应。其次，开始搭建项目整体框架，要接口的假数
+    sum(10); //14
+    sum(11, 1, 2)  //14
+在书
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-30
                             </span>
                         <span class="publish-author">
                             
@@ -613,10 +602,53 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/展望/">
-                        <span class="chip bg-color">展望</span>
+                    <a href="/tags/ES6笔记/">
+                        <span class="chip bg-color">ES6笔记</span>
                     </a>
                     
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/01/30/index/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+    
+        ///参数默认值
+
+        // 旧 要把 三个参数都写了 才能正确执行
+        function sum(a, b = 1, c = 3) {
+            return a + b 
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            hongmengping
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>

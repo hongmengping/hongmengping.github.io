@@ -508,7 +508,25 @@
 <p><img src="CD99DFDD-D795-4AA9-B1D7-D83B5C6AA845.png" alt=""></p>
 <p>3.在manifest.json -&gt;  h5配置   -&gt;  运行的基础路径</p>
 <p><img src="63FB4B20-408E-494B-857E-8F8C40CCEAB0.png" alt=""></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 

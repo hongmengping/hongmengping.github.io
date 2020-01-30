@@ -1,5 +1,6 @@
-https://hongmengping.github.io/2020/01/29/es6-zhi-han-shu/
-https://hongmengping.github.io/2020/01/24/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/
+https://hongmengping.github.io/2020/01/30/es6-zhi-han-shu/
+https://hongmengping.github.io/2020/01/30/index/
+https://hongmengping.github.io/2020/01/30/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/
 https://hongmengping.github.io/2020/01/24/zong-jie-zhi-xin-nian-ji-yu/
 https://hongmengping.github.io/2020/01/15/es6-zhi-let-he-const/
 https://hongmengping.github.io/2020/01/14/chu-tan-bi-bao/
