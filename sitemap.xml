@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hongmengping.github.io/2020/01/30/es6-zhi-han-shu/</loc>
+    <loc>https://hongmengping.github.io/2020/01/31/es6-zhi-dui-xiang/</loc>
     
-    <lastmod>2020-01-31T07:14:18.556Z</lastmod>
+    <lastmod>2020-01-31T08:24:33.254Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hongmengping.github.io/2020/01/30/index/</loc>
+    <loc>https://hongmengping.github.io/2020/01/15/es6-zhi-let-he-const/</loc>
     
-    <lastmod>2020-01-30T10:53:55.618Z</lastmod>
+    <lastmod>2020-01-31T07:17:28.738Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://hongmengping.github.io/2020/01/30/es6-zhi-zi-fu-chuan-he-zheng-ze-biao-da-shi/</loc>
     
-    <lastmod>2020-01-30T10:44:01.622Z</lastmod>
+    <lastmod>2020-01-31T07:17:25.510Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hongmengping.github.io/2020/01/30/es6-zhi-han-shu/</loc>
+    
+    <lastmod>2020-01-31T07:17:22.483Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hongmengping.github.io/2020/01/13/bi-ji-zhi-es6/</loc>
+    
+    <lastmod>2020-01-31T07:17:18.081Z</lastmod>
     
   </url>
   
@@ -40,20 +54,6 @@
     <loc>https://hongmengping.github.io/2020/01/08/uniapp-ru-keng-ji/</loc>
     
     <lastmod>2020-01-30T08:32:12.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hongmengping.github.io/2020/01/15/es6-zhi-let-he-const/</loc>
-    
-    <lastmod>2020-01-24T08:12:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hongmengping.github.io/2020/01/13/bi-ji-zhi-es6/</loc>
-    
-    <lastmod>2020-01-24T08:11:56.000Z</lastmod>
     
   </url>
   
@@ -93,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://hongmengping.github.io/archives/index.html</loc>
+    <loc>https://hongmengping.github.io/categories/index.html</loc>
     
     <lastmod>2019-09-25T14:13:10.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hongmengping.github.io/categories/index.html</loc>
+    <loc>https://hongmengping.github.io/archives/index.html</loc>
     
     <lastmod>2019-09-25T14:13:10.000Z</lastmod>
     
