@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-01T13:18:05.879Z</updated>
+  <updated>2020-02-01T13:49:14.501Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6之符号</title>
+    <link href="https://hongmengping.github.io/2020/02/01/es6-zhi-fu-hao/"/>
+    <id>https://hongmengping.github.io/2020/02/01/es6-zhi-fu-hao/</id>
+    <published>2020-02-01T13:39:17.000Z</published>
+    <updated>2020-02-01T13:49:14.501Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;普通符号&quot;&gt;&lt;a href=&quot;#普通符号&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/categories/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6之解构</title>

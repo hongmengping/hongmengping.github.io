@@ -4,14 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="初探闭包, 想要飞翔的小菜鸟">
-    <meta name="description" content="一.闭包产生的原因
-当内部函数被保存到外部时，将会生成闭包。闭包会导致原有的作用域链不释放，造成内存泄露
+    <meta name="keywords" content="ES6之符号, 想要飞翔的小菜鸟">
+    <meta name="description" content="普通符号符号是ES6新增的一个数据类型，它通过使用函数Symbol(符号名)来创建
+符号设计的初衷，是为了给对象设置私有属性
+符号具有以下特点：
 
-function a () {
-  function b() {
-     var bbb = 234;
-     console.">
+没有字面量
+使用 typeof 得到的类型是 symbol
+每次调用 Symbol 函数得到">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@ function a () {
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>初探闭包 | 想要飞翔的小菜鸟</title>
+    <title>ES6之符号 | 想要飞翔的小菜鸟</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/libs/awesome/css/all.css">
@@ -276,12 +276,12 @@ function a () {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初探闭包</h1>
+                    <h1 class="description center-align post-title">ES6之符号</h1>
                 </div>
             </div>
         </div>
@@ -398,14 +398,23 @@ function a () {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/笔记/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/ES6笔记/">
+                                <span class="chip bg-color">ES6笔记</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/ES6笔记/" class="post-category">
+                                ES6笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -414,7 +423,7 @@ function a () {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-14
+                    2020-02-01
                 </div>
                 
 
@@ -431,96 +440,21 @@ function a () {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-闭包产生的原因"><a href="#一-闭包产生的原因" class="headerlink" title="一.闭包产生的原因"></a>一.闭包产生的原因</h2><blockquote>
-<p>当内部函数被保存到外部时，将会生成闭包。闭包会导致原有的作用域链不释放，造成内存泄露</p>
-</blockquote>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> a <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">function</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-     <span class="token keyword">var</span> bbb <span class="token operator">=</span> <span class="token number">234</span><span class="token punctuation">;</span>
-     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>aaa<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
-   <span class="token keyword">var</span> aaa <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
-   <span class="token keyword">return</span> b<span class="token punctuation">;</span>
- <span class="token punctuation">}</span>
- <span class="token keyword">var</span> glob <span class="token operator">=</span> <span class="token number">100</span>；
- <span class="token keyword">var</span> demo <span class="token operator">=</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token function">demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>如下图<br><img src="image-20200114211612972.png" alt="image-20200114211612972"><br>return b是把b保存到外部了。当a执行完砍掉自己的执行期上下文，b仍然可以访问a的执行期上下文。只要是内部的函数被保存到外部，就一定会产生闭包。</p>
-<h2 id="二-闭包的作用"><a href="#二-闭包的作用" class="headerlink" title="二.闭包的作用"></a>二.闭包的作用</h2><ul>
-<li>1.实现公有变量</li>
-<li>2.可以做缓存(存储结构)</li>
-<li>3.可以实现属性私有化</li>
-<li>4.模块开发，防止污染全局变量</li>
+                <h1 id="普通符号"><a href="#普通符号" class="headerlink" title="普通符号"></a>普通符号</h1><p>符号是ES6新增的一个数据类型，它通过使用函数<code>Symbol(符号名)</code>来创建</p>
+<p>符号设计的初衷，是为了给对象设置私有属性</p>
+<p>符号具有以下特点：</p>
+<ul>
+<li>没有字面量</li>
+<li>使用 typeof 得到的类型是 symbol</li>
+<li><strong>每次调用 Symbol 函数得到的符号永远不相等，无论符号名是否相同</strong></li>
+<li>符号可以作为对象的属性名存在，这种属性称为符号属性 <ul>
+<li>开发者可以通过精心的设计，让这些属性无法通过常规方式被外界访问</li>
+<li>符号属性是不能枚举的，因此在 for-in 循环中无法读取到符号属性，Object.keys 方法也无法读取到符号属性</li>
+<li>Object.getOwnPropertyNames 尽管可以得到所有无法枚举的属性，但是仍然无法读取到符号属性</li>
+<li>ES6 新增 Object.getOwnPropertySymbols 方法，可以读取符号</li>
 </ul>
-<ol>
-<li><p>实现公有变量</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token keyword">function</span> <span class="token function">demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
- count <span class="token operator">++</span><span class="token punctuation">;</span>
- console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">return</span> demo<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">var</span> conter <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>每次调用counter就会在原有的基础上加一次，count作为他们的公有变量</p>
 </li>
-<li><p>可以做缓存</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
- num <span class="token operator">++</span><span class="token punctuation">;</span>
- console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">function</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
- num <span class="token operator">--</span><span class="token punctuation">;</span>
- console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">return</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">var</span> myArr <span class="token operator">=</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-myArr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//101</span>
-myArr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//100</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ol>
-<p>函数a和函数b共用test的执行期上下文，所以num相当于在缓存中。a中的num++和b中的num–相当于从缓存中取。所以num是同一个。</p>
-<p>4.模块开发，防止污染全局变量</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"GlobalName"</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//全局变量</span>
-
-<span class="token keyword">var</span> init <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"initName"</span><span class="token punctuation">;</span>
-  <span class="token keyword">function</span> <span class="token function">callName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//打印name</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">callName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//形成接口</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// --> initName</span>
-<span class="token keyword">var</span> initSuper <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"initSuperName"</span><span class="token punctuation">;</span>
-  <span class="token keyword">function</span> <span class="token function">callName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//打印name</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">callName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//形成接口</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">initSuper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// --> initSuperName</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>在执行init( )和initSuper( )时打印的name值互不影响</p>
-<h2 id="三-闭包和匿名函数的区别"><a href="#三-闭包和匿名函数的区别" class="headerlink" title="三. 闭包和匿名函数的区别"></a>三. 闭包和匿名函数的区别</h2><ul>
-<li>匿名函数：没有函数名称的函数。当函数执行完之后，执行期上下文会被销毁，内存中仅保存全局作用域。</li>
-<li>闭包：一个可以使用另外一个函数作用域中的变量的函数。执行期上下文不会被销毁，仍然保存在内存中</li>
+<li>符号无法被隐式转换，因此不能被用于数学运算，字符串拼接或其他隐式转换的场景，但符号可以显式转换为字符串，通过 String 构造函数进行转换即可，console.log 之所有可以输出符号，是它在内部进行了显式转换</li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -553,8 +487,8 @@ myArr<span class="token punctuation">[</span><span class="token number">1</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/笔记/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/ES6笔记/">
+                                    <span class="chip bg-color">ES6笔记</span>
                                 </a>
                             
                         </div>
@@ -720,29 +654,36 @@ myArr<span class="token punctuation">[</span><span class="token number">1</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/15/es6-zhi-let-he-const/">
+                <a href="/2020/02/01/es6-zhi-fu-hao/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="ES6之let和const">
+                        <img src="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="ES6之符号">
                         
-                        <span class="card-title">ES6之let和const</span>
+                        <span class="card-title">ES6之符号</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            let的用法和var差不多，但是又和var不相同。let是为了弥补var的设计不足。var中只有全局作用域和局部作用域。在if和for中声明的也都是全局作用域，只有函数中声明会变成局部作用域。而let就有块级作用域，只要被大括号包裹就是块级
+                            普通符号符号是ES6新增的一个数据类型，它通过使用函数Symbol(符号名)来创建
+符号设计的初衷，是为了给对象设置私有属性
+符号具有以下特点：
+
+没有字面量
+使用 typeof 得到的类型是 symbol
+每次调用 Symbol 函数得到
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -755,6 +696,7 @@ myArr<span class="token punctuation">[</span><span class="token number">1</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -773,27 +715,30 @@ myArr<span class="token punctuation">[</span><span class="token number">1</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/13/bi-ji-zhi-es6/">
+                <a href="/2020/02/01/es6-zhi-jie-gou/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="笔记之js的缺点">
+                        <img src="https://cdn.jsdelivr.net/gh/hongmengping/hongmengping.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="ES6之解构">
                         
-                        <span class="card-title">笔记之js的缺点</span>
+                        <span class="card-title">ES6之解构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JS的缺点
-允许重复的变量声明：导致数据被覆盖
-var a = 1;function print() {console.log(a)}//假设有n行代码var a = 2;print()
-a = 2 会覆盖 a = 1 由于js这种事弱语言
+                            对象解构什么是解构解构不会被解构的目标造成任何影响
+const user = {
+    name: 'kevin',
+    age: 11,
+    sex: '男',
+    address: {
+        province: 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-01
                             </span>
                         <span class="publish-author">
                             
@@ -949,6 +894,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
     <footer class="page-footer bg-color">
