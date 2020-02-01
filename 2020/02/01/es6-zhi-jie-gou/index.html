@@ -468,6 +468,19 @@ address <span class="token operator">=</span> user<span class="token punctuation
 <h2 id="非同名属性解构"><a href="#非同名属性解构" class="headerlink" title="非同名属性解构"></a>非同名属性解构</h2><pre class="line-numbers language-js"><code class="language-js">
 <span class="token punctuation">{</span>属性名<span class="token punctuation">:</span> 变量名<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'kevin'</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">11</span><span class="token punctuation">,</span>
+    sex<span class="token punctuation">:</span> <span class="token string">'男'</span><span class="token punctuation">,</span>
+    address<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        province<span class="token punctuation">:</span> <span class="token string">'四川'</span><span class="token punctuation">,</span>
+        city<span class="token punctuation">:</span> <span class="token string">'成都'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 先定义4个变量：name、age、gender、address</span>
+<span class="token comment" spellcheck="true">// 再从对象user中读取同名属性赋值（其中gender读取的是sex属性）</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> sex<span class="token punctuation">,</span> address <span class="token punctuation">}</span> <span class="token operator">=</span> user<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
