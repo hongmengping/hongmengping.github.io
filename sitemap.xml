@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hongmengping.github.io/2020/02/01/es6-zhi-jie-gou/</loc>
+    
+    <lastmod>2020-02-01T05:31:37.598Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hongmengping.github.io/2020/01/31/es6-zhi-dui-xiang/</loc>
     
-    <lastmod>2020-01-31T08:24:33.254Z</lastmod>
+    <lastmod>2020-02-01T05:30:43.517Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hongmengping.github.io/about/index.html</loc>
+    
+    <lastmod>2020-02-01T02:25:04.010Z</lastmod>
     
   </url>
   
@@ -33,13 +47,6 @@
     <loc>https://hongmengping.github.io/2020/01/13/bi-ji-zhi-es6/</loc>
     
     <lastmod>2020-01-31T07:17:18.081Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hongmengping.github.io/about/index.html</loc>
-    
-    <lastmod>2020-01-30T09:17:42.554Z</lastmod>
     
   </url>
   

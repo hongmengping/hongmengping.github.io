@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-01-31T08:24:33.254Z</updated>
+  <updated>2020-02-01T05:31:37.598Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ES6之解构</title>
+    <link href="https://hongmengping.github.io/2020/02/01/es6-zhi-jie-gou/"/>
+    <id>https://hongmengping.github.io/2020/02/01/es6-zhi-jie-gou/</id>
+    <published>2020-02-01T05:31:37.000Z</published>
+    <updated>2020-02-01T05:31:37.598Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ES6之对象</title>
     <link href="https://hongmengping.github.io/2020/01/31/es6-zhi-dui-xiang/"/>
     <id>https://hongmengping.github.io/2020/01/31/es6-zhi-dui-xiang/</id>
     <published>2020-01-31T07:16:24.000Z</published>
-    <updated>2020-01-31T08:24:33.254Z</updated>
+    <updated>2020-02-01T05:30:43.517Z</updated>
     
     <summary type="html">
     
