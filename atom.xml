@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-01T13:49:14.501Z</updated>
+  <updated>2020-02-02T06:02:02.044Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hongmengping.github.io/2020/02/01/es6-zhi-fu-hao/"/>
     <id>https://hongmengping.github.io/2020/02/01/es6-zhi-fu-hao/</id>
     <published>2020-02-01T13:39:17.000Z</published>
-    <updated>2020-02-01T13:49:14.501Z</updated>
+    <updated>2020-02-02T06:02:02.044Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         
         
-          &lt;h1 id=&quot;普通符号&quot;&gt;&lt;a href=&quot;#普通符号&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;普通符号&quot;&gt;&lt;a href=&quot;#普通符号&quot; class=&quot;headerlink&quot; title=&quot;普通符号&quot;&gt;&lt;/a&gt;普通符号&lt;/h1&gt;&lt;p&gt;符号是ES6新增的一个数据类型，它通过使用函数&lt;code&gt;Symbol(符号名)&lt;/code&gt;来创建&lt;/p&gt;
+&lt;pre
         
       
     
