@@ -43,6 +43,32 @@
   </entry>
   
   <entry>
+    <title>ES6之异步处理- async和await</title>
+    <link href="https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-async-he-await/"/>
+    <id>https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-async-he-await/</id>
+    <published>2020-02-03T04:43:30.000Z</published>
+    <updated>2020-02-04T05:48:04.114Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;async-和-await&quot;&gt;&lt;a href=&quot;#async-和-await&quot; class=&quot;headerlink&quot; title=&quot;async 和 await&quot;&gt;&lt;/a&gt;async 和 await&lt;/h1&gt;&lt;p&gt;async 和 await 是 ES2016
+        
+      
+    
+    </summary>
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/categories/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ES6之异步处理 -- 【回顾】事件循环</title>
     <link href="https://hongmengping.github.io/2020/02/02/es6-zhi-yi-bu-chu-li-hui-gu-shi-jian-xun-huan/"/>
     <id>https://hongmengping.github.io/2020/02/02/es6-zhi-yi-bu-chu-li-hui-gu-shi-jian-xun-huan/</id>
