@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-04T04:37:52.376Z</updated>
+  <updated>2020-02-04T04:42:31.350Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ES6之Promise</title>
-    <link href="https://hongmengping.github.io/2020/02/03/es6-zhi-promise/"/>
-    <id>https://hongmengping.github.io/2020/02/03/es6-zhi-promise/</id>
+    <title>ES6之异步处理- Promise</title>
+    <link href="https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-promise/"/>
+    <id>https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-promise/</id>
     <published>2020-02-03T06:06:44.000Z</published>
-    <updated>2020-02-04T04:37:52.376Z</updated>
+    <updated>2020-02-04T04:42:31.350Z</updated>
     
     <summary type="html">
     

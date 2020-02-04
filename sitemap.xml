@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hongmengping.github.io/2020/02/03/es6-zhi-promise/</loc>
+    <loc>https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-promise/</loc>
     
-    <lastmod>2020-02-04T04:37:52.376Z</lastmod>
+    <lastmod>2020-02-04T04:42:31.350Z</lastmod>
     
   </url>
   
@@ -114,7 +114,7 @@
   </url>
   
   <url>
-    <loc>https://hongmengping.github.io/404.html</loc>
+    <loc>https://hongmengping.github.io/archives/index.html</loc>
     
     <lastmod>2019-09-25T14:13:10.000Z</lastmod>
     
@@ -135,7 +135,7 @@
   </url>
   
   <url>
-    <loc>https://hongmengping.github.io/archives/index.html</loc>
+    <loc>https://hongmengping.github.io/404.html</loc>
     
     <lastmod>2019-09-25T14:13:10.000Z</lastmod>
     
