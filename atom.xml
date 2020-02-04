@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-04T03:35:03.683Z</updated>
+  <updated>2020-02-04T03:45:43.316Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hongmengping.github.io/2020/02/03/es6-zhi-promise/"/>
     <id>https://hongmengping.github.io/2020/02/03/es6-zhi-promise/</id>
     <published>2020-02-03T06:06:44.000Z</published>
-    <updated>2020-02-04T03:35:03.683Z</updated>
+    <updated>2020-02-04T03:45:43.316Z</updated>
     
     <summary type="html">
     
@@ -29,11 +29,7 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;h1 id=&quot;Promise的基本使用&quot;&gt;&lt;a href=&quot;#Promise的基本使用&quot; class=&quot;headerlink&quot; title=&quot;Promise的基本使用&quot;&gt;&lt;/a&gt;Promise的基本使用&lt;/h1&gt;&lt;pre class=&quot;line-numbers
         
       
     
