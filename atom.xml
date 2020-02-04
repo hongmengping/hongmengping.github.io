@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-04T02:45:57.599Z</updated>
+  <updated>2020-02-04T03:27:48.367Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://hongmengping.github.io/2020/02/04/es6-zhi-promise/"/>
+    <id>https://hongmengping.github.io/2020/02/04/es6-zhi-promise/</id>
+    <published>2020-02-04T03:02:00.063Z</published>
+    <updated>2020-02-04T03:27:48.367Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: ES6之Promise&lt;br&gt;top: false&lt;br&gt;cover: false&lt;br&gt;toc: true&lt;br&gt;mathjax: true&lt;br&gt;date: 2020-02-03
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ES6之异步处理 -- 【回顾】事件循环</title>
     <link href="https://hongmengping.github.io/2020/02/02/es6-zhi-yi-bu-chu-li-hui-gu-shi-jian-xun-huan/"/>
     <id>https://hongmengping.github.io/2020/02/02/es6-zhi-yi-bu-chu-li-hui-gu-shi-jian-xun-huan/</id>
     <published>2020-02-02T06:06:44.000Z</published>
-    <updated>2020-02-04T02:45:57.599Z</updated>
+    <updated>2020-02-04T03:00:37.045Z</updated>
     
     <summary type="html">
     
