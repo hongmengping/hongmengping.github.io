@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-04T03:27:48.367Z</updated>
+  <updated>2020-02-04T03:32:36.095Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://hongmengping.github.io/2020/02/04/es6-zhi-promise/"/>
-    <id>https://hongmengping.github.io/2020/02/04/es6-zhi-promise/</id>
-    <published>2020-02-04T03:02:00.063Z</published>
-    <updated>2020-02-04T03:27:48.367Z</updated>
+    <title>ES6之Promise</title>
+    <link href="https://hongmengping.github.io/2020/02/03/es6-zhi-promise/"/>
+    <id>https://hongmengping.github.io/2020/02/03/es6-zhi-promise/</id>
+    <published>2020-02-03T03:02:00.000Z</published>
+    <updated>2020-02-04T03:32:36.095Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,16 @@
       
         
         
-          &lt;hr&gt;
-&lt;p&gt;title: ES6之Promise&lt;br&gt;top: false&lt;br&gt;cover: false&lt;br&gt;toc: true&lt;br&gt;mathjax: true&lt;br&gt;date: 2020-02-03
+          &lt;h1 id=&quot;Promise的基本使用&quot;&gt;&lt;a href=&quot;#Promise的基本使用&quot; class=&quot;headerlink&quot; title=&quot;Promise的基本使用&quot;&gt;&lt;/a&gt;Promise的基本使用&lt;/h1&gt;&lt;pre class=&quot;line-numbers
         
       
     
     </summary>
     
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/categories/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

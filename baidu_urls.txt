@@ -1,4 +1,4 @@
-https://hongmengping.github.io/2020/02/04/es6-zhi-promise/
+https://hongmengping.github.io/2020/02/03/es6-zhi-promise/
 https://hongmengping.github.io/2020/02/02/es6-zhi-yi-bu-chu-li-hui-gu-shi-jian-xun-huan/
 https://hongmengping.github.io/2020/02/01/es6-zhi-fu-hao/
 https://hongmengping.github.io/2020/02/01/es6-zhi-jie-gou/
