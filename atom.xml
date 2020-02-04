@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-02T06:02:02.044Z</updated>
+  <updated>2020-02-04T02:45:57.599Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6之异步处理 -- 【回顾】事件循环</title>
+    <link href="https://hongmengping.github.io/2020/02/02/es6-zhi-yi-bu-chu-li-hui-gu-shi-jian-xun-huan/"/>
+    <id>https://hongmengping.github.io/2020/02/02/es6-zhi-yi-bu-chu-li-hui-gu-shi-jian-xun-huan/</id>
+    <published>2020-02-02T06:06:44.000Z</published>
+    <updated>2020-02-04T02:45:57.599Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;事件循环小例子&quot;&gt;&lt;a href=&quot;#事件循环小例子&quot; class=&quot;headerlink&quot; title=&quot;事件循环小例子&quot;&gt;&lt;/a&gt;事件循环小例子&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-js&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/categories/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6之符号</title>

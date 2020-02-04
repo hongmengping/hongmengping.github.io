@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hongmengping.github.io/2020/02/02/es6-zhi-yi-bu-chu-li-hui-gu-shi-jian-xun-huan/</loc>
+    
+    <lastmod>2020-02-04T02:45:57.599Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hongmengping.github.io/2020/02/01/es6-zhi-fu-hao/</loc>
     
     <lastmod>2020-02-02T06:02:02.044Z</lastmod>
@@ -100,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://hongmengping.github.io/404.html</loc>
+    <loc>https://hongmengping.github.io/archives/index.html</loc>
     
     <lastmod>2019-09-25T14:13:10.000Z</lastmod>
     
@@ -114,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://hongmengping.github.io/tags/index.html</loc>
+    <loc>https://hongmengping.github.io/404.html</loc>
     
     <lastmod>2019-09-25T14:13:10.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hongmengping.github.io/archives/index.html</loc>
+    <loc>https://hongmengping.github.io/tags/index.html</loc>
     
     <lastmod>2019-09-25T14:13:10.000Z</lastmod>
     
