@@ -488,6 +488,7 @@ async目的是简化在函">
 
 <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果await的表达式不是Promise，则会将其使用Promise.resolve包装后按照规则运行</p>
 <pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//获取李华所在班级的老师的信息</span>
 <span class="token comment" spellcheck="true">//1. 获取李华的班级id   Promise</span>
 <span class="token comment" spellcheck="true">//2. 根据班级id获取李华所在班级的老师id   Promise</span>
@@ -590,7 +591,6 @@ async目的是简化在函">
 <span class="token punctuation">}</span>
 
 <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>如果await的表达式不是Promise，则会将其使用Promise.resolve包装后按照规则运行</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {

@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hongmengping.github.io/2020/02/06/es6-zhi-set-map-ji-he/</loc>
+    
+    <lastmod>2020-02-07T04:34:15.033Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hongmengping.github.io/2020/02/04/es6-zhi-die-dai-qi-he-sheng-cheng-qi/</loc>
+    
+    <lastmod>2020-02-04T06:40:01.461Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hongmengping.github.io/2020/02/04/es6-zhi-fetch-api/</loc>
+    
+    <lastmod>2020-02-04T06:39:07.873Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-async-he-await/</loc>
     
-    <lastmod>2020-02-04T05:48:04.114Z</lastmod>
+    <lastmod>2020-02-04T05:52:47.988Z</lastmod>
     
   </url>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-04T04:42:31.350Z</updated>
+  <updated>2020-02-07T04:34:15.033Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6之set、map集合</title>
+    <link href="https://hongmengping.github.io/2020/02/06/es6-zhi-set-map-ji-he/"/>
+    <id>https://hongmengping.github.io/2020/02/06/es6-zhi-set-map-ji-he/</id>
+    <published>2020-02-06T12:20:11.000Z</published>
+    <updated>2020-02-07T04:34:15.033Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;set-集合&quot;&gt;&lt;a href=&quot;#set-集合&quot; class=&quot;headerlink&quot; title=&quot;set 集合&quot;&gt;&lt;/a&gt;set
+        
+      
+    
+    </summary>
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/categories/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://hongmengping.github.io/2020/02/04/es6-zhi-die-dai-qi-he-sheng-cheng-qi/"/>
+    <id>https://hongmengping.github.io/2020/02/04/es6-zhi-die-dai-qi-he-sheng-cheng-qi/</id>
+    <published>2020-02-04T06:39:39.027Z</published>
+    <updated>2020-02-04T06:40:01.461Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: ES6之迭代器和生成器&lt;br&gt;top: false&lt;br&gt;cover: false&lt;br&gt;toc: true&lt;br&gt;mathjax: true&lt;br&gt;date: 2020-02-04
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ES6之Fetch Api</title>
+    <link href="https://hongmengping.github.io/2020/02/04/es6-zhi-fetch-api/"/>
+    <id>https://hongmengping.github.io/2020/02/04/es6-zhi-fetch-api/</id>
+    <published>2020-02-04T06:08:55.000Z</published>
+    <updated>2020-02-04T06:39:07.873Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;需结合网络-暂时略过&quot;&gt;&lt;a href=&quot;#需结合网络-暂时略过&quot; class=&quot;headerlink&quot; title=&quot;需结合网络 暂时略过&quot;&gt;&lt;/a&gt;需结合网络 暂时略过&lt;/h1&gt;&lt;script&gt;
+       
+        
+      
+    
+    </summary>
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/categories/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="ES6笔记" scheme="https://hongmengping.github.io/tags/ES6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6之异步处理- Promise</title>
@@ -47,7 +123,7 @@
     <link href="https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-async-he-await/"/>
     <id>https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-async-he-await/</id>
     <published>2020-02-03T04:43:30.000Z</published>
-    <updated>2020-02-04T05:48:04.114Z</updated>
+    <updated>2020-02-04T05:52:47.988Z</updated>
     
     <summary type="html">
     
