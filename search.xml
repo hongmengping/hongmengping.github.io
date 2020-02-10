@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>第四周学习计划总结</title>
+      <link href="/2020/02/10/di-si-zhou-xue-xi-ji-hua-zong-jie/"/>
+      <url>/2020/02/10/di-si-zhou-xue-xi-ji-hua-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h1><p>心理研究表明，改变习惯需要21天。坚持一个多月背单词，现在背单词已经成为每天起床第一要紧事。但是每天就背十个单词，总体来说比较少。为了践行执行力，报名英语网课，从音标开始。音标的学习一共有42章，目前学到第5章，包括12个单元音标，8个双元音音标，以及22个辅音音标。其实英语音标和中文的拼音，相似的还挺多的，还是要多加练习</p><h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><p>这段时间，把之前一直想学的ES6提上日程。let和const代替了var，让代码更加严谨。模板字符串让字符串中包含变量变得不那么的繁琐。箭头函数的this指向定义位置的this指向，这样就不用在函数外把this赋值给新变量，等等等。下周的计划回顾vue。</p><h1 id="这周不足点"><a href="#这周不足点" class="headerlink" title="这周不足点"></a>这周不足点</h1><p>刚刚开始学的很专注，但是到后面就有点懒散。下周严格遵循番茄学习法。知识点第一天学了，第二天之后也没有再复习，导致前面知识点容易遗忘。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 周总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 周总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ES6之set、map集合</title>
       <link href="/2020/02/06/es6-zhi-set-map-ji-he/"/>
       <url>/2020/02/06/es6-zhi-set-map-ji-he/</url>
@@ -23,19 +48,6 @@
             <tag> ES6笔记 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2020/02/04/es6-zhi-die-dai-qi-he-sheng-cheng-qi/"/>
-      <url>/2020/02/04/es6-zhi-die-dai-qi-he-sheng-cheng-qi/</url>
-      
-        <content type="html"><![CDATA[<hr><p>title: ES6之迭代器和生成器<br>top: false<br>cover: false<br>toc: true<br>mathjax: true<br>date: 2020-02-04 14:39:38<br>password:<br>summary:<br>tags: ES6笔记</p><h2 id="categories-ES6笔记"><a href="#categories-ES6笔记" class="headerlink" title="categories: ES6笔记"></a>categories: ES6笔记</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
       
     </entry>
     

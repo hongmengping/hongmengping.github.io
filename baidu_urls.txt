@@ -1,5 +1,5 @@
+https://hongmengping.github.io/2020/02/10/di-si-zhou-xue-xi-ji-hua-zong-jie/
 https://hongmengping.github.io/2020/02/06/es6-zhi-set-map-ji-he/
-https://hongmengping.github.io/2020/02/04/es6-zhi-die-dai-qi-he-sheng-cheng-qi/
 https://hongmengping.github.io/2020/02/04/es6-zhi-fetch-api/
 https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-promise/
 https://hongmengping.github.io/2020/02/03/es6-zhi-yi-bu-chu-li-async-he-await/
