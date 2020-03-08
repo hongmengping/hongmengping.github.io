@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongmengping.github.io/"/>
-  <updated>2020-02-10T14:41:41.246Z</updated>
+  <updated>2020-03-08T11:58:36.150Z</updated>
   <id>https://hongmengping.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有关h5微信支付</title>
+    <link href="https://hongmengping.github.io/2020/03/08/you-guan-h5-wei-xin-zhi-fu/"/>
+    <id>https://hongmengping.github.io/2020/03/08/you-guan-h5-wei-xin-zhi-fu/</id>
+    <published>2020-03-08T10:53:47.000Z</published>
+    <updated>2020-03-08T11:58:36.150Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;由于项目需要支付功能，由于微信支付需要很高的手续费，所以借用第三方的支付平台（支付派）来对接微信支付。&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>第四周学习计划总结</title>
